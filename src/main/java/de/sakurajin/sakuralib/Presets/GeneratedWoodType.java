@@ -7,7 +7,9 @@ import net.devtech.arrp.json.recipe.JIngredients;
 import net.devtech.arrp.json.recipe.JRecipe;
 import net.devtech.arrp.json.recipe.JResult;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeRegistry;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.WoodType;
@@ -62,15 +64,62 @@ public class GeneratedWoodType {
         }
     }
 
+    public static class GeneratedWoodTypeBuilder{
+        private final String name;
+        private BlockSetType baseBlockSetType = BlockSetType.OAK;
+        private WoodType baseWoodType = WoodType.OAK;
+        private String baseWoodTypeString = "minecraft:oak";
+        private final ArrayList<SettingsOverride> settingsOverrides = new ArrayList<>();
+
+        private GeneratedWoodTypeBuilder(String name){
+            this.name = name;
+        }
+        static GeneratedWoodTypeBuilder create(String name){
+            return new GeneratedWoodTypeBuilder(name);
+        }
+
+        static GeneratedWoodTypeBuilder create(String name, BlockSetType baseBlockSetType, WoodType baseWoodType, String baseWoodTypeString){
+            return new GeneratedWoodTypeBuilder(name).baseBlockSetType(baseBlockSetType).baseWoodType(baseWoodType).baseWoodTypeString(baseWoodTypeString);
+        }
+
+        public GeneratedWoodTypeBuilder baseBlockSetType(BlockSetType baseBlockSetType){
+            this.baseBlockSetType = baseBlockSetType;
+            return this;
+        }
+
+        public GeneratedWoodTypeBuilder baseWoodType(WoodType baseWoodType){
+            this.baseWoodType = baseWoodType;
+            return this;
+        }
+
+        public GeneratedWoodTypeBuilder baseWoodTypeString(String baseWoodTypeString){
+            this.baseWoodTypeString = baseWoodTypeString;
+            return this;
+        }
+
+        public GeneratedWoodTypeBuilder addSettingsOverride(SettingsOverride settingsOverride){
+            this.settingsOverrides.add(settingsOverride);
+            return this;
+        }
+
+        public GeneratedWoodTypeBuilder addSettingsOverrides(SettingsOverride... settingsOverrides){
+            this.settingsOverrides.addAll(Arrays.asList(settingsOverrides));
+            return this;
+        }
+
+        public GeneratedWoodType build(DatagenModContainer container){
+            var blockSetType = BlockSetTypeBuilder.copyOf(baseBlockSetType).register(container.getSimpleID(name));
+            var woodType = WoodTypeBuilder.copyOf(baseWoodType).register(container.getSimpleID(name), blockSetType);
+            return new GeneratedWoodType(this.name, blockSetType, woodType, baseWoodTypeString, settingsOverrides, container);
+        }
+    }
+
     private final String name;
-
     private final String baseWoodType;
-
     private final String textureFolder;
     public final WoodType woodType;
     public final BlockSetType blockSetType;
     public final ArrayList<SettingsOverride> settingsOverrides = new ArrayList<>();
-
 
     //generate blocks to prevent generation of the same block multiple times
     private CubeColumn log = null;
@@ -82,29 +131,20 @@ public class GeneratedWoodType {
     private Door door = null;
     private Trapdoor trapdoor = null;
 
-    public static WoodType registerWoodType(String id, DatagenModContainer container) {
-        return WoodTypeRegistry.register(container.getSimpleID(id), new BlockSetType(id));
-    }
-
-    public static BlockSetType registerBlockSetType(String id, DatagenModContainer container) {
-        return BlockSetTypeRegistry.registerWood(container.getSimpleID(id));
-    }
-
-    public GeneratedWoodType(String name, DatagenModContainer container){
-        this(name, container, "minecraft:oak");
-    }
-
-    public GeneratedWoodType(String name, DatagenModContainer container, String baseWoodType){
-        this(name, container, baseWoodType, null);
-    }
-
-    public GeneratedWoodType(String name, DatagenModContainer container, String baseWoodType, SettingsOverride[] settingsOverrides){
+    public GeneratedWoodType(
+        String name,
+        BlockSetType blockSetType,
+        WoodType woodType,
+        String baseWoodType,
+        ArrayList<SettingsOverride> settingsOverrides,
+        DatagenModContainer container
+    ){
         this.name = name;
-        this.woodType = registerWoodType(name, container);
-        this.blockSetType = registerBlockSetType(name, container);
+        this.blockSetType = blockSetType;
+        this.woodType = woodType;
         this.textureFolder = container.getStringID(name, "block");
         this.baseWoodType = baseWoodType;
-        this.settingsOverrides.addAll(Arrays.asList(settingsOverrides));
+        this.settingsOverrides.addAll(settingsOverrides);
     }
 
     private String getTextureName(String suffix){
@@ -118,6 +158,8 @@ public class GeneratedWoodType {
         }else{
             blockSettings = settings.blockSettings;
         }
+
+        blockSettings = blockSettings.sounds(this.woodType.soundType());
 
         for (SettingsOverride override : settingsOverrides) {
             blockSettings = override.override(blockSettings);

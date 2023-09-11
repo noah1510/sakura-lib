@@ -1,0 +1,4 @@
+{
+  "text.config.SakuraLib.option.DEBUG": "Debug mode",
+  "text.config.SakuraLib.option.DEBUG.tooltip": "Akiviert den Debug Modus. Es werden mehr Informationen in der Konsole ausgegeben und die Generierten Datein werden ins Dateisystem exportiert."
+}

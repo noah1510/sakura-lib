@@ -1,0 +1,4 @@
+{
+  "text.config.SakuraLib.option.DEBUG": "Enable debug mode",
+  "text.config.SakuraLib.option.DEBUG.tooltip": "This enables the debug mode which will produce more logs in the console and dump created files to the disk."
+}

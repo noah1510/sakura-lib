@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+
+* making GeneratedWoodTypeBuilder.create public (bugiifx)
+* updated readme with better description
+
 ## 1.1.0
 
 * Add Ci builds and mc publish support

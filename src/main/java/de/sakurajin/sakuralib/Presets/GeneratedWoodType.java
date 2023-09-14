@@ -74,12 +74,12 @@ public class GeneratedWoodType {
         private GeneratedWoodTypeBuilder(String name){
             this.name = name;
         }
-        static GeneratedWoodTypeBuilder create(String name){
+        public static GeneratedWoodTypeBuilder create(String name){
             return new GeneratedWoodTypeBuilder(name);
         }
 
-        static GeneratedWoodTypeBuilder create(String name, BlockSetType baseBlockSetType, WoodType baseWoodType, String baseWoodTypeString){
-            return new GeneratedWoodTypeBuilder(name).baseBlockSetType(baseBlockSetType).baseWoodType(baseWoodType).baseWoodTypeString(baseWoodTypeString);
+        public static GeneratedWoodTypeBuilder create(String name, BlockSetType baseBlockSetType, WoodType baseWoodType, String baseWoodTypeString){
+            return create(name).baseBlockSetType(baseBlockSetType).baseWoodType(baseWoodType).baseWoodTypeString(baseWoodTypeString);
         }
 
         public GeneratedWoodTypeBuilder baseBlockSetType(BlockSetType baseBlockSetType){

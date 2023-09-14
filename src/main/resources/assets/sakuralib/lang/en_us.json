@@ -1,4 +1,68 @@
 {
   "text.config.SakuraLib.option.DEBUG": "Enable debug mode",
-  "text.config.SakuraLib.option.DEBUG.tooltip": "This enables the debug mode which will produce more logs in the console and dump created files to the disk."
+  "text.config.SakuraLib.option.DEBUG.tooltip": "This enables the debug mode which will produce more logs\nin the console and dump created files to the disk.",
+
+  "text.config.SakuraLib.section.ModTracking": "Mod Version Tracking",
+  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_CHANGE": "Warn on major version change",
+  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_CHANGE.tooltip": "Warns the player when trying to join a world with a different major version of a mod\nthan the one used last time to join the world (e.g. 1.0.0 -> 2.0.0).",
+
+  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_CHANGE": "Warn on minor version change",
+  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_CHANGE.tooltip": "Warns the player when trying to join a world with a different minor or patch version of a mod\nthan the one used last time to join the world (e.g. 1.0.0 -> 1.1.0 or 1.0.0 -> 1.0.1).",
+
+  "text.sakuralib.updatetracker.title": "Mod Update Information",
+  "text.sakuralib.updatetracker.warning_main": "You are about to join a world with different mod versions. This may cause issues.\n",
+  "text.sakuralib.updateTracker.updates_title": "The following mods have been updated since you last played on this world:\n",
+
+  "text.sakuralib.updateTracker.button.ignore_warning": "Play anyway",
+  "text.sakuralib.updateTracker.button.ignore_warning.tooltip": "This will ignore the warning and join the world anyway.",
+  "text.sakuralib.updateTracker.button.back_to_menu": "Back to main menu",
+  "text.sakuralib.updateTracker.button.back_to_menu.tooltip": "This will return you to the main menu.",
+
+  "text.sakuralib.updateTracker.mod_removed": [
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " has been ",
+    {"text":"removed", "color": "red", "italic": true},
+    "!"
+  ],
+
+  "text.sakuralib.updateTracker.mod_format_version_change":[
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " ",
+    "format",
+    " has been ",
+    "changed",
+    " from ",
+    { "index": 1, "color": "gold", "bold": true },
+    " to ",
+    { "index": 2, "color": "gold", "bold": true },
+    "."
+  ],
+  "text.sakuralib.updateTracker.mod_version_updated": [
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " ",
+    "version",
+    " has been ",
+    "updated",
+    " from ",
+    { "index": 1, "color": "gold", "bold": true },
+    " to ",
+    { "index": 2, "color": "gold", "bold": true },
+    "."
+  ],
+  "text.sakuralib.updateTracker.mod_version_downgraded": [
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " ",
+    "version",
+    " has been ",
+    "downgraded",
+    " from ",
+    { "index": 1, "color": "gold", "bold": true },
+    " to ",
+    { "index": 2, "color": "gold", "bold": true },
+    "."
+    ]
 }

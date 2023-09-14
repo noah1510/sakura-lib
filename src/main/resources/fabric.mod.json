@@ -22,6 +22,11 @@
     ]
   },
 
+  "mixins": [
+    "sakuralib.mixins.json"
+  ],
+  "accessWidener" : "sakuralib.accesswidener",
+
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
@@ -48,6 +53,10 @@
         "advanced_runtime_resource_pack(required){modrinth:arrp}",
         "modmenu(optional)"
       ]
+    },
+
+    "sakuralib": {
+      "format_version": 1
     }
   }
 }

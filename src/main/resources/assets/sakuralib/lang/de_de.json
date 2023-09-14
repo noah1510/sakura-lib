@@ -1,4 +1,67 @@
 {
   "text.config.SakuraLib.option.DEBUG": "Debug mode",
-  "text.config.SakuraLib.option.DEBUG.tooltip": "Akiviert den Debug Modus. Es werden mehr Informationen in der Konsole ausgegeben und die Generierten Datein werden ins Dateisystem exportiert."
+  "text.config.SakuraLib.option.DEBUG.tooltip": "Akiviert den Debug Modus. Es werden mehr Informationen in der Konsole ausgegeben\nund die Generierten Datein werden ins Dateisystem exportiert.",
+
+  "text.config.SakuraLib.section.ModTracking": "Mod Versions Checks",
+  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_CHANGE": "Warne bei Haupt Version Änderung",
+  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_CHANGE.tooltip": "Warnt den Spieler wenn er versucht eine Welt zu betreten, die mit einer anderen Haupt Version\ndes Mods zuletzt gestartet wurde (z.B. 1.0.0 -> 2.0.0).",
+
+  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_CHANGE": "Warne bei Neben Version Änderung",
+  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_CHANGE.tooltip": "Warnt den Spieler wenn er versucht eine Welt zu betreten, die mit einer anderen Neben Version\ndes Mods zuletzt gestartet wurde (z.B. 1.0.0 -> 1.1.0; 1.0.0 -> 1.0.1).",
+  "text.sakuralib.updatetracker.title": "Mod Update Informationen",
+  "text.sakuralib.updatetracker.warning_main": "Du bist dabei eine Welt zu öffnen trotz geänderter mod Versionen. Dies kann zu Problemen fürhen!\n",
+  "text.sakuralib.updateTracker.updates_title": "Die folgenden mods haben Versionsänderungen seit dem letzten Start:\n",
+
+  "text.sakuralib.updateTracker.button.ignore_warning": "Trotdem beitreten",
+  "text.sakuralib.updateTracker.button.ignore_warning.tooltip": "Dies wird die Warnung ignorieren und dich trotzdem beitreten lassen.",
+  "text.sakuralib.updateTracker.button.back_to_menu": "Zurück zum Hauptmenü",
+  "text.sakuralib.updateTracker.button.back_to_menu.tooltip": "Dies schickt dich zurück zum Hauptmenü ohne die Welt zu laden.\nDu kannst die Welt später laden, wenn du die Mods aktualisiert hast.",
+
+  "text.sakuralib.updateTracker.mod_removed": [
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " wurde ",
+    {"text":"entfernt", "color": "red", "italic": true},
+    "!"
+  ],
+
+  "text.sakuralib.updateTracker.mod_format_version_change":[
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " ",
+    "Format",
+    " wurde ",
+    "geändert",
+    " von ",
+    { "index": 1, "color": "gold", "bold": true },
+    " zu ",
+    { "index": 2, "color": "gold", "bold": true },
+    "."
+  ],
+  "text.sakuralib.updateTracker.mod_version_updated": [
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " ",
+    "Version",
+    " wurde ",
+    "erhöht",
+    " von ",
+    { "index": 1, "color": "gold", "bold": true },
+    " zu ",
+    { "index": 2, "color": "gold", "bold": true },
+    "."
+  ],
+  "text.sakuralib.updateTracker.mod_version_downgraded": [
+    "",
+    { "index": 0, "color": "blue", "bold": true },
+    " ",
+    "Version",
+    " wurde ",
+    "verringert",
+    " von ",
+    { "index": 1, "color": "gold", "bold": true },
+    " zu ",
+    { "index": 2, "color": "gold", "bold": true },
+    "."
+  ]
 }

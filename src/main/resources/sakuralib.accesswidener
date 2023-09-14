@@ -1,0 +1,6 @@
+accessWidener	v2	named
+
+#used in modUpdateScreen:
+accessible    method    net/minecraft/client/gui/screen/world/WorldListWidget$WorldEntry    start  ()V
+accessible field net/minecraft/client/gui/screen/world/WorldListWidget$WorldEntry level Lnet/minecraft/world/level/storage/LevelSummary;
+accessible field net/minecraft/client/gui/screen/world/WorldListWidget$WorldEntry screen Lnet/minecraft/client/gui/screen/world/SelectWorldScreen;

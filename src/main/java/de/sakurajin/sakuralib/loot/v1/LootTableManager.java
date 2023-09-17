@@ -3,7 +3,7 @@ package de.sakurajin.sakuralib.loot.v1;
 import de.sakurajin.sakuralib.SakuraLib;
 import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.minecraft.loot.entry.LootTableEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class LootTableManager {
      * The second key is the index of the loot pool that should be injected into.
      * The value is a list of LootTableEntries that should be injected into the loot pool.
      */
-    static final private HashMap<Identifier, HashMap<Integer, ArrayList<LootTableEntry>>> lootTableEntries = new HashMap<>();
+    static final private HashMap<Identifier, HashMap<Integer, ArrayList<LootPoolEntry>>> lootTableEntries = new HashMap<>();
 
     // This is used to prevent the loot table manager from being injected multiple times.
     static boolean isInitialized = false;
@@ -66,12 +66,12 @@ public class LootTableManager {
 
     /**
      * An overloaded version of insertEntry to simplify inserting into the pool with index 0.
-     * @see LootTableManager#insertEntry(Identifier, LootTableEntry, int)
+     * @see LootTableManager#insertEntry(Identifier, LootPoolEntry, int)
      *
      * @param lootTable The Identifier of the loot table that should be injected into.
      * @param entry The entry that should be injected.
      */
-    static public void insertEntry(Identifier lootTable, LootTableEntry entry){
+    static public void insertEntry(Identifier lootTable, LootPoolEntry entry){
         insertEntry(lootTable, entry, 0);
     }
 
@@ -83,8 +83,8 @@ public class LootTableManager {
      * @param entry The entry that should be injected.
      * @param LootPoolIndex The index of the loot pool that should be injected into.
      */
-    static public void insertEntry(Identifier lootTable, LootTableEntry entry, int LootPoolIndex){
-        insertEntries(lootTable, new LootTableEntry[]{entry}, LootPoolIndex);
+    static public void insertEntry(Identifier lootTable, LootPoolEntry entry, int LootPoolIndex){
+        insertEntries(lootTable, new LootPoolEntry[]{entry}, LootPoolIndex);
     }
 
     /**
@@ -95,8 +95,8 @@ public class LootTableManager {
      * @param entries A list of Entries that should be injected.
      * @param LootPoolIndex The index of the loot pool that should be injected into.
      */
-    static public void insertEntries(Identifier lootTable, LootTableEntry[] entries, int LootPoolIndex){
-        HashMap<Integer, ArrayList<LootTableEntry>> entryPairList = new HashMap<>();
+    static public void insertEntries(Identifier lootTable, LootPoolEntry[] entries, int LootPoolIndex){
+        HashMap<Integer, ArrayList<LootPoolEntry>> entryPairList = new HashMap<>();
         entryPairList.put(LootPoolIndex, new ArrayList<>(Arrays.asList(entries)));
         insertEntries(lootTable, entryPairList);
     }
@@ -113,10 +113,10 @@ public class LootTableManager {
      * @param lootTable The Identifier of the loot table that should be injected into.
      * @param entries a List of Pairs containing the index of the loot pool and the entry that should be injected.
      */
-    static public void insertEntries(Identifier lootTable, HashMap<Integer, ArrayList<LootTableEntry>> entries){
-        HashMap<Integer, ArrayList<LootTableEntry>> lootTableEntryList = lootTableEntries.getOrDefault(lootTable, new HashMap<>());
+    static public void insertEntries(Identifier lootTable, HashMap<Integer, ArrayList<LootPoolEntry>> entries){
+        HashMap<Integer, ArrayList<LootPoolEntry>> lootTableEntryList = lootTableEntries.getOrDefault(lootTable, new HashMap<>());
         for (var entry: entries.entrySet()){
-            ArrayList<LootTableEntry> lootTableEntryArrayList = lootTableEntryList.getOrDefault(entry.getKey(), new ArrayList<>());
+            ArrayList<LootPoolEntry> lootTableEntryArrayList = lootTableEntryList.getOrDefault(entry.getKey(), new ArrayList<>());
             lootTableEntryArrayList.addAll(entry.getValue());
             lootTableEntryList.put(entry.getKey(), lootTableEntryArrayList);
         }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+* (bugfix) Use LootPoolEntry instead of LootTableEntry in LootTableManager
+
 ## 1.2.0
 
 * Add a LootTableManager to allow injecting loot table entries into loot table pools

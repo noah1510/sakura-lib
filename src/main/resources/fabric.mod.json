@@ -48,10 +48,7 @@
       "modrinth": "qNs9hFiu",
       "loaders": ["fabric"],
       "dependencies": [
-        "fabric-api(required)",
-        "owo-lib(required)",
-        "advanced_runtime_resource_pack(required){modrinth:arrp}",
-        "modmenu(optional)"
+        "advanced_runtime_resource_pack(required){modrinth:arrp}"
       ]
     },
 

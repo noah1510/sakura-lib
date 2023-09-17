@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.2
+
+* Add a TradeHelper to simplify creating trades (it has compatibility with numismatic overhaul)
+* Add the StructureDataBuilder to arrp.v1.wordgen (this one will see large changes for v2)
+
 ## 1.2.1
 
 * (bugfix) Use LootPoolEntry instead of LootTableEntry in LootTableManager

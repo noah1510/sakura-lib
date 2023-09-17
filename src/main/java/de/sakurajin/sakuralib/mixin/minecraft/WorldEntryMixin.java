@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.mixin.minecraft;
 
-import de.sakurajin.sakuralib.impl.ui.modUpdateScreen;
+import de.sakurajin.sakuralib.internal.SakuraLibConfig;
+import de.sakurajin.sakuralib.internal.ui.modUpdateScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.world.WorldListWidget;
 import net.minecraft.world.level.storage.LevelSummary;
@@ -18,6 +19,10 @@ public abstract class WorldEntryMixin {
 
     @Inject(method = "play", at = @At("HEAD"), cancellable = true)
     public void sakuralib$play(CallbackInfo ci){
+        //check if the warning screen is enabled
+        if(!SakuraLibConfig.createAndLoad().ENABLE_WARNING_SCREEN()){
+            return;
+        }
         if(!this.level.isUnavailable()){
             modUpdateScreen sakuralib$updateScreen = new modUpdateScreen((WorldListWidget.WorldEntry)(Object)this);
             if(!sakuralib$updateScreen.canJoin()){

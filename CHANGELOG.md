@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0
+
+* Add a LootTableManager to allow injecting loot table entries into loot table pools
+* moving the classes to other packages for a cleaner api
+* Disable the warning screen by default and marking it as experimental
+* Update the translations for the options screen
+
 ## 1.1.1
 
 * making GeneratedWoodTypeBuilder.create public (bugiifx)

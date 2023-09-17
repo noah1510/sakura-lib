@@ -1,8 +1,9 @@
 package de.sakurajin.sakuralib;
 
-import de.sakurajin.sakuralib.util.DatagenModContainer;
-import de.sakurajin.sakuralib.impl.SakuraLibConfig;
-import de.sakurajin.sakuralib.util.ModVersionTracker;
+import de.sakurajin.sakuralib.loot.v1.LootTableManager;
+import de.sakurajin.sakuralib.datagen.v1.DatagenModContainer;
+import de.sakurajin.sakuralib.internal.SakuraLibConfig;
+import de.sakurajin.sakuralib.versionTracker.v1.ModVersionTracker;
 import net.fabricmc.api.ModInitializer;
 
 public class SakuraLib implements ModInitializer {
@@ -22,5 +23,8 @@ public class SakuraLib implements ModInitializer {
 
         DATAGEN_CONTAINER.LOGGER.info("loading format and/or mod versions");
         ModVersionTracker.init();
+
+        //init the loot table manager
+        LootTableManager.init();
     }
 }

@@ -3,11 +3,17 @@
   "text.config.SakuraLib.option.DEBUG.tooltip": "This enables the debug mode which will produce more logs\nin the console and dump created files to the disk.",
 
   "text.config.SakuraLib.section.ModTracking": "Mod Version Tracking",
-  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_CHANGE": "Warn on major version change",
-  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_CHANGE.tooltip": "Warns the player when trying to join a world with a different major version of a mod\nthan the one used last time to join the world (e.g. 1.0.0 -> 2.0.0).",
+  "text.config.SakuraLib.option.ENABLE_WARNING_SCREEN": "Enable the warning screen",
+  "text.config.SakuraLib.option.ENABLE_WARNING_SCREEN.tooltip": "This enables the warning screen when joining a world in singleplayer.\nBy default this screen will warn you on version downgrades and mod removals.",
 
-  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_CHANGE": "Warn on minor version change",
-  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_CHANGE.tooltip": "Warns the player when trying to join a world with a different minor or patch version of a mod\nthan the one used last time to join the world (e.g. 1.0.0 -> 1.1.0 or 1.0.0 -> 1.0.1).",
+  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_UPDATE": "Warn on major version update",
+  "text.config.SakuraLib.option.WARN_ON_MAJOR_VERSION_UPDATE.tooltip": "Warns the player when trying to join a world with an update major version of a mod\nthan the one used last time to join the world (e.g. 1.0.0 -> 2.0.0).",
+
+  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_UPDATE": "Warn on any version update",
+  "text.config.SakuraLib.option.WARN_ON_MINOR_VERSION_UPDATE.tooltip": "Warns the player when trying to join a world with an updated minor or patch version of a mod\nthan the one used last time to join the world (e.g. 1.0.0 -> 1.1.0 or 1.0.0 -> 1.0.1).",
+
+  "text.config.SakuraLib.option.WARN_ON_FORMAT_VERSION_UPDATE": "Warn on format version update",
+  "text.config.SakuraLib.option.WARN_ON_FORMAT_VERSION_UPDATE.tooltip": "Warns the player when trying to join a world with an updated format version.\nThis usually means that the mod has been updated to a new major version.",
 
   "text.sakuralib.updatetracker.title": "Mod Update Information",
   "text.sakuralib.updatetracker.warning_main": "You are about to join a world with different mod versions. This may cause issues.\n",

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['fence_0',['Fence',['../classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1Presets_1_1Blocks_1_1Fence.html#ab65d650896d531e8985cc2c9bb0a10b9',1,'de::sakurajin::sakuralib::datagen::v1::Presets::Blocks::Fence']]],
-  ['fencegate_1',['FenceGate',['../classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1Presets_1_1Blocks_1_1FenceGate.html#afcc1563858505c24fe9d99ca7e5173d8',1,'de::sakurajin::sakuralib::datagen::v1::Presets::Blocks::FenceGate']]]
+  ['emeraldsfromcurrency_0',['emeraldsFromCurrency',['../classde_1_1sakurajin_1_1sakuralib_1_1villager_1_1v1_1_1TradeParameters.html#a5f677b6fd40b78724fc4475ef23dcd93',1,'de::sakurajin::sakuralib::villager::v1::TradeParameters']]],
+  ['exclusionradius_1',['exclusionRadius',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1StructureDataBuilder.html#a75e203a77b0d0543e96da6be0b813794',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::StructureDataBuilder']]],
+  ['exculisionstructure_2',['exculisionStructure',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1StructureDataBuilder.html#ab6deafa7b320fe7e4364044aa30bba32',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::StructureDataBuilder']]]
 ];

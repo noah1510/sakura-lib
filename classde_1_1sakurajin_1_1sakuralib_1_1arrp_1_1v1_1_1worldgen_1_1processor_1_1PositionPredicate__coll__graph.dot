@@ -1,0 +1,14 @@
+digraph "de.sakurajin.sakuralib.arrp.v1.worldgen.processor.PositionPredicate"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="de.sakurajin.sakuralib.arrp.v1.worldgen.processor.\lPositionPredicate",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" predicate_type" ];
+  Node2 [label="de.sakurajin.sakuralib.arrp.v1.worldgen.processor.\lPositionPredicate.positionPredicateType",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" ALWAYS_TRUE\nAXIS_ALIGNED_LINEAR\l_POS\nLINEAR_POS" ];
+  Node3 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" positionPredicate" ];
+  Node3 [label="JsonObject",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+}

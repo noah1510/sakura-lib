@@ -1,0 +1,12 @@
+digraph "de.sakurajin.sakuralib.datagen.v1.Presets.Blocks.Door"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="de.sakurajin.sakuralib.datagen.v1.\lPresets.Blocks.Door",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="DoorBlock",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="de.sakurajin.sakuralib.datagen.v1.\lDataGenerateable",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$interfacede_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DataGenerateable.html",tooltip=" "];
+}

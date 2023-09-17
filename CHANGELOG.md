@@ -6,6 +6,7 @@
 * moving the classes to other packages for a cleaner api
 * Disable the warning screen by default and marking it as experimental
 * Update the translations for the options screen
+* No longer have remap=false in WorldEntryMixin
 
 ## 1.1.1
 

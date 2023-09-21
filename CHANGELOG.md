@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+
+* initial patchouli support in the arrp v2 package
+
 ## 1.2.2
 
 * Add a TradeHelper to simplify creating trades (it has compatibility with numismatic overhaul)

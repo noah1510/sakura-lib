@@ -35,7 +35,8 @@
     "advanced_runtime_resource_pack": ">=0.8.0"
   },
   "suggests": {
-    "modmenu": "*"
+    "modmenu": "*",
+    "numismatic-overhaul": "*"
   },
 
   "custom": {

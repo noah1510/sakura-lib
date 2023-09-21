@@ -120,6 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac5f63b0c64bbe148c3cff9dd83a420e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#ac5f63b0c64bbe148c3cff9dd83a420e2">registerPatchouliCategory</a> (String bookname, <a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1JPatchouliCategory.html">JPatchouliCategory</a> category)</td></tr>
 <tr class="memdesc:ac5f63b0c64bbe148c3cff9dd83a420e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and register a patchouli category.  <a href="classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#ac5f63b0c64bbe148c3cff9dd83a420e2">More...</a><br /></td></tr>
 <tr class="separator:ac5f63b0c64bbe148c3cff9dd83a420e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76cd9233cca1a3380816aced6149f3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#aa76cd9233cca1a3380816aced6149f3e">registerPatchouliCategory</a> (String bookname, String CategoryID, <a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1JPatchouliCategory.html">JPatchouliCategory</a> category)</td></tr>
+<tr class="memdesc:aa76cd9233cca1a3380816aced6149f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and register a patchouli category.  <a href="classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#aa76cd9233cca1a3380816aced6149f3e">More...</a><br /></td></tr>
+<tr class="separator:aa76cd9233cca1a3380816aced6149f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab29d2f729b974f776ab450b2d4d5cc23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#ab29d2f729b974f776ab450b2d4d5cc23">registerPatchouliEntry</a> (String bookname, String locale, <a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1JPatchouliEntry.html">JPatchouliEntry</a> entry)</td></tr>
 <tr class="memdesc:ab29d2f729b974f776ab450b2d4d5cc23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and register a patchouli entry.  <a href="classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#ab29d2f729b974f776ab450b2d4d5cc23">More...</a><br /></td></tr>
 <tr class="separator:ab29d2f729b974f776ab450b2d4d5cc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -779,7 +782,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ac5f63b0c64bbe148c3cff9dd83a420e2" name="ac5f63b0c64bbe148c3cff9dd83a420e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5f63b0c64bbe148c3cff9dd83a420e2">&#9670;&#160;</a></span>registerPatchouliCategory()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f63b0c64bbe148c3cff9dd83a420e2">&#9670;&#160;</a></span>registerPatchouliCategory() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -805,9 +808,53 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate and register a patchouli category. </p>
+<p >This will set the category ID to the category name. see <code><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#aa76cd9233cca1a3380816aced6149f3e">registerPatchouliCategory(String, String, JPatchouliCategory)</a></code> for more information. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bookname</td><td>The name of the book this category belongs to. </td></tr>
+    <tr><td class="paramname">category</td><td>The category to register. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa76cd9233cca1a3380816aced6149f3e" name="aa76cd9233cca1a3380816aced6149f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76cd9233cca1a3380816aced6149f3e">&#9670;&#160;</a></span>registerPatchouliCategory() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.sakurajin.sakuralib.datagen.v1.DatagenModContainer.registerPatchouliCategory </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>bookname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>CategoryID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1JPatchouliCategory.html">JPatchouliCategory</a>&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate and register a patchouli category. </p>
 <p >This will create the json and register it into the resource pack. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bookname</td><td>The name of the book this category belongs to. </td></tr>
+    <tr><td class="paramname">CategoryID</td><td>The id of the category. </td></tr>
     <tr><td class="paramname">category</td><td>The category to register. </td></tr>
   </table>
   </dd>

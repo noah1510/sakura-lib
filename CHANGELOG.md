@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2
+
+* changing the type of JRecipePage from patchouli:recipe to patchouli:crafting (before was a bug)
+
 ## 1.3.1
 
 * fixing the generated json for patchouli recipes (a call to super.toJson was missing)

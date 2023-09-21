@@ -15,7 +15,7 @@ public class JRecipePage extends JPageBase {
     private String text = null;
 
     private JRecipePage(String item1){
-        super("patchouli:recipe");
+        super("patchouli:crafting");
         this.recipe = item1;
     }
 

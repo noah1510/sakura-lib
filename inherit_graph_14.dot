@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="de.sakurajin.sakuralib.loot.v1.\lLootDistributionHelper",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootDistributionHelper.html",tooltip="This class can be used to create weight distributions for loot tables."];
+  Node0 [label="de.sakurajin.sakuralib.datagen.v1.\lDatagenModContainer.LootTableConditionAdder",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$interfacede_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer_1_1LootTableConditionAdder.html",tooltip=" "];
 }

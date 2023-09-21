@@ -1,6 +1,9 @@
 package de.sakurajin.sakuralib.datagen.v1;
 
 import com.google.gson.JsonObject;
+import de.sakurajin.sakuralib.arrp.v2.patchouli.JPatchouliBook;
+import de.sakurajin.sakuralib.arrp.v2.patchouli.JPatchouliCategory;
+import de.sakurajin.sakuralib.arrp.v2.patchouli.JPatchouliEntry;
 import de.sakurajin.sakuralib.util.v1.TagIdentifier;
 import io.wispforest.owo.itemgroup.OwoItemGroup;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
@@ -144,6 +147,77 @@ public class DatagenModContainer{
                 throw e;
             }
         }
+    }
+
+    /**
+     * Generate and register a patchouli book.
+     * The provided book will be converted to a json string and then registered into the resource pack.
+     * @param bookname The name of the book.
+     * @param book The book to register.
+     */
+    public void registerPatchouliBook(String bookname, JPatchouliBook book){
+        var location = getSimpleID("book.json", "patchouli_books/"+bookname);
+        RESOURCE_PACK.addData(location, book.toString().getBytes());
+    }
+
+    /**
+     * Generate and register a patchouli category.
+     * This will create the json and register it into the resource pack.
+     * @param bookname The name of the book this category belongs to.
+     * @param category The category to register.
+     */
+    public void registerPatchouliCategory(String bookname, JPatchouliCategory category){
+        var location = getSimpleID(category.getName()+".json", "patchouli_books/"+bookname+"/en_us/categories");
+        RESOURCE_PACK.addAsset(location, category.toString().getBytes());
+    }
+
+    /**
+     * Generate and register a patchouli entry.
+     * This will create the json and register it into the resource pack.
+     * @param bookname The name of the book this entry belongs to.
+     * @param locale The locale of the entry.
+     * @param entry The entry to register.
+     */
+    public void registerPatchouliEntry(String bookname, String locale, JPatchouliEntry entry){
+        String category = entry.getCategory();
+        if(category.split(":").length == 2){
+            category = category.split(":")[1];
+        }
+        var location = getSimpleID(entry.getName()+".json", "patchouli_books/"+bookname+"/"+locale+"/entries/"+category);
+        RESOURCE_PACK.addAsset(location, entry.toString().getBytes());
+    }
+
+    /**
+     * Register multiple entries at once.
+     * Check out {@link #registerPatchouliEntry(String, String, JPatchouliEntry)} for more information.
+     * @param bookname The name of the book this entry belongs to.
+     * @param locale The locale of the entry.
+     * @param entries The entries to register.
+     */
+    public void registerPatchouliEntries(String bookname, String locale, JPatchouliEntry... entries){
+        for(JPatchouliEntry entry : entries){
+            registerPatchouliEntry(bookname, locale, entry);
+        }
+    }
+
+    /**
+     * Register a patchouli entry with the en_us as locale.
+     * see {@link #registerPatchouliEntry(String, String, JPatchouliEntry)} for more information.
+     * @param bookname The name of the book this entry belongs to.
+     * @param entry The entry to register.
+     */
+    public void registerPatchouliEntry(String bookname, JPatchouliEntry entry){
+        registerPatchouliEntry(bookname, "en_us", entry);
+    }
+
+    /**
+     * Register multiple entries at once with the en_us as locale.
+     * see {@link #registerPatchouliEntries(String, String, JPatchouliEntry...)} for more information.
+     * @param bookname The name of the book this entry belongs to.
+     * @param entries The entries to register.
+     */
+    public void registerPatchouliEntries(String bookname, JPatchouliEntry... entries){
+        registerPatchouliEntries(bookname, "en_us", entries);
     }
 
     public String getStringID(String name){

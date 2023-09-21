@@ -215,4 +215,22 @@ public class JPatchouliEntry {
         return toJson().toString();
     }
 
+    /**
+     * get the name of this entry.
+     * This is used to create the filename for the entry
+     * @return The set name for this entry
+     */
+    public String getName(){
+        return name;
+    }
+
+    /**
+     * get the category of this entry.
+     * This is used to get the directory to store this entry in.
+     * @return The set category of this entry.
+     */
+    public String getCategory(){
+        return category;
+    }
+
 }

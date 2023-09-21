@@ -105,4 +105,12 @@ public class JPatchouliCategory {
     public String toString() {
         return toJson().toString();
     }
+
+    /**
+     * get the set category name
+     * @return the name set before
+     */
+    public String getName(){
+        return name;
+    }
 }

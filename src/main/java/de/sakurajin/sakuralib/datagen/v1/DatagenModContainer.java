@@ -162,12 +162,24 @@ public class DatagenModContainer{
 
     /**
      * Generate and register a patchouli category.
-     * This will create the json and register it into the resource pack.
+     * This will set the category ID to the category name.
+     * see {@link #registerPatchouliCategory(String, String, JPatchouliCategory)} for more information.
      * @param bookname The name of the book this category belongs to.
      * @param category The category to register.
      */
     public void registerPatchouliCategory(String bookname, JPatchouliCategory category){
-        var location = getSimpleID(category.getName()+".json", "patchouli_books/"+bookname+"/en_us/categories");
+        registerPatchouliCategory(bookname, category.getName(), category);
+    }
+
+    /**
+     * Generate and register a patchouli category.
+     * This will create the json and register it into the resource pack.
+     * @param bookname The name of the book this category belongs to.
+     * @param CategoryID The id of the category.
+     * @param category The category to register.
+     */
+    public void registerPatchouliCategory(String bookname, String CategoryID, JPatchouliCategory category){
+        var location = getSimpleID(CategoryID+".json", "patchouli_books/"+bookname+"/en_us/categories");
         RESOURCE_PACK.addAsset(location, category.toString().getBytes());
     }
 

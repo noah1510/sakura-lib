@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3
+
+* Add variant of registerPatchouliCategory which allows for a category ID that differs from the name (useful for translations)
+
 ## 1.3.2
 
 * changing the type of JRecipePage from patchouli:recipe to patchouli:crafting (before was a bug)

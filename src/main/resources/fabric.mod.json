@@ -36,7 +36,8 @@
   },
   "suggests": {
     "modmenu": "*",
-    "numismatic-overhaul": "*"
+    "numismatic-overhaul": "*",
+    "patchouli": "*"
   },
 
   "custom": {

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+
+* fixing the generated json for patchouli recipes (a call to super.toJson was missing)
+
 ## 1.3.0
 
 * initial patchouli support in the arrp v2 package

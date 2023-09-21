@@ -66,7 +66,7 @@ public class JRecipePage extends JPageBase {
      */
     @Override
     public JsonObject toJson() {
-        JsonObject RecipeJson = new JsonObject();
+        JsonObject RecipeJson = super.toJson();
 
         RecipeJson.addProperty("recipe", recipe);
         if(recipe2 != null) RecipeJson.addProperty("recipe2", recipe2);

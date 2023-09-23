@@ -425,11 +425,13 @@ public class JPatchouliBook {
         if(pause_game) bookJson.addProperty("pause_game", true);
 
         //add the macros
-        JsonObject macrosJson = new JsonObject();
-        for (var entry : macros.entrySet()) {
-            macrosJson.addProperty(entry.getKey(), entry.getValue());
+        if(!macros.isEmpty()) {
+            JsonObject macrosJson = new JsonObject();
+            for (var entry : macros.entrySet()) {
+                macrosJson.addProperty(entry.getKey(), entry.getValue());
+            }
+            bookJson.add("macros", macrosJson);
         }
-        bookJson.add("macros", macrosJson);
 
         return bookJson;
     }

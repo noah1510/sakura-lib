@@ -12,15 +12,15 @@ import java.util.Map;
  */
 public class LootSourceHelper {
     //the bitmasks for the different loot table sources
-    public static final int VANILLA = 0b0001;
-    public static final int MOD = 0b0010;
+    public static final int VANILLA   = 0b0001;
+    public static final int MOD       = 0b0010;
     public static final int DATA_PACK = 0b0100;
-    public static final int REPLACED = 0b1000;
+    public static final int REPLACED  = 0b1000;
 
     //combined bitmasks for common use cases
-    public static final int BUILTIN = VANILLA | MOD;
+    public static final int BUILTIN   = VANILLA | MOD;
     public static final int ADDITIONS = DATA_PACK | VANILLA | MOD;
-    public static final int ALL = VANILLA | MOD | DATA_PACK | REPLACED;
+    public static final int ALL       = VANILLA | MOD | DATA_PACK | REPLACED;
 
     /**
      * A map that maps loot table sources to a unique integer value.
@@ -36,12 +36,13 @@ public class LootSourceHelper {
 
     /**
      * This function is used to encode a list of loot table sources into a single integer value.
+     *
      * @param sources The list of loot table sources that should be encoded.
      * @return The encoded integer value.
      */
-    public static int getNumberFor(LootTableSource... sources){
+    public static int getNumberFor(LootTableSource... sources) {
         int id = 0;
-        for(var source: sources){
+        for (var source : sources) {
             id |= sourceIDMap.get(source);
         }
         return id;
@@ -49,13 +50,14 @@ public class LootSourceHelper {
 
     /**
      * This function is used to decode a single integer value into a list of loot table sources.
+     *
      * @param id The integer value that should be decoded.
      * @return The list of loot table sources.
      */
-    public static List<LootTableSource> getSources(int id){
+    public static List<LootTableSource> getSources(int id) {
         ArrayList<LootTableSource> sources = new ArrayList<>();
-        for(var source: sourceIDMap.keySet()){
-            if(inNumber(id, source)){
+        for (var source : sourceIDMap.keySet()) {
+            if (inNumber(id, source)) {
                 sources.add(source);
             }
         }
@@ -69,7 +71,7 @@ public class LootSourceHelper {
      * @param source The loot table source that should be checked.
      * @return True if the loot table source is in the integer value, false otherwise.
      */
-    public static boolean inNumber(int number, LootTableSource source){
+    public static boolean inNumber(int number, LootTableSource source) {
         return (number & sourceIDMap.get(source)) != 0;
     }
 }

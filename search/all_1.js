@@ -9,5 +9,6 @@ var searchData=
   ['buildstructure_6',['buildStructure',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1StructureDataBuilder.html#ab64c88d59fea7cd8050eb55ad27f3fca',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::StructureDataBuilder']]],
   ['buildstructurepool_7',['buildStructurePool',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1StructureDataBuilder.html#a0c8df10d3eee273e51ad7bc253b3488c',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::StructureDataBuilder']]],
   ['buildstructureset_8',['buildStructureSet',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1StructureDataBuilder.html#a004e08eb495dae054feaf7e0d944efb4',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::StructureDataBuilder']]],
-  ['byrule_9',['byRule',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1processor_1_1JProcessor.html#a4245f8e8f71e2018fd93e836aa38525b',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::processor::JProcessor']]]
+  ['builtin_9',['BUILTIN',['../classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootSourceHelper.html#abd26344c0e9d4a028d3cca48df3c50f1',1,'de::sakurajin::sakuralib::loot::v1::LootSourceHelper']]],
+  ['byrule_10',['byRule',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1processor_1_1JProcessor.html#a4245f8e8f71e2018fd93e836aa38525b',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::processor::JProcessor']]]
 ];

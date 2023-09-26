@@ -14,6 +14,9 @@ public class JTextPage extends JPageBase {
     private JTextPage() {
         super("patchouli:text");
     }
+    protected JTextPage(String type) {
+        super(type);
+    }
 
     /**
      * Creates a new text page.

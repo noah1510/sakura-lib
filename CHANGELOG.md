@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0
+
+* Add the new loot.v2 API
+  * The new loot api now uses a functional interface to add loot entries
+  * The v1 api now uses the v2 api under the hood (it is still available for backwards compatibility but marked as deprecated)
+  * 
+
 ## 1.3.4
 
 * only add macros to book.json if they are not empty

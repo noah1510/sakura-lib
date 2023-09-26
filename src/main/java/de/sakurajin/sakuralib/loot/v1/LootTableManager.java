@@ -1,11 +1,9 @@
 package de.sakurajin.sakuralib.loot.v1;
 
-import de.sakurajin.sakuralib.SakuraLib;
-import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import de.sakurajin.sakuralib.loot.v2.table_insert.LootEntryInsert;
+
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,69 +15,18 @@ import java.util.HashMap;
  * For more information on how to specify the loot sources see @ref LootSourceHelper.
  * <p>
  * To inject pools into loot tables you can use the fabric API directly.
+ * @deprecated use the v2 LootTableManager instead. Will be removed in 2.0.0
  */
+@Deprecated(since = "1.4.0", forRemoval = true)
 public class LootTableManager {
-    /**
-     * This is the internal list of loot table entries that should be injected into loot tables.
-     * To optimize the performance of the loot table building process all entries are stored in this complex HashMap
-     * instead of a more simple list using LootEntryInsert.
-     * This Data structure is pre sorted by loot table and loot pool index.
-     * This removes the need to check every entry and exit early if the loot table or pool index does not match.
-     * The loot sources are still checked for every entry since not every entry has the same loot sources.
-     */
-    static final private HashMap<
-        Identifier,                 //The loot table identifier
-        HashMap<                    //A hashmap containing all entries that should be injected into a loot table
-            Integer,                //The loot pool index
-            ArrayList<              //The list of entries that should be injected
-                Pair<               //A pair of the LootTableEntry and the loot sources
-                    LootPoolEntry,  //The LootTableEntry that should be injected
-                    Integer         //The loot sources that should be injected
-                    >>>> lootTableEntries = new HashMap<>();
 
-
-    // This is used to prevent the loot table manager from being injected multiple times.
-    static boolean isInitialized = false;
 
     /**
      * This function is used to initialize the loot table manager.
      * It is called by the Init of sakuralib and does not need to be called form external code.
      * There is no harm in calling it multiple times since a safety check is in place, but it is useless.
      */
-    static public void init() {
-        if (isInitialized) return;
-
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, setter) -> {
-            if (!lootTableEntries.containsKey(id)) {
-                return;
-            }
-
-            var lootTableEntryList = lootTableEntries.get(id);
-            var lootPools          = tableBuilder.pools;
-
-            for (var entry : lootTableEntryList.entrySet()) {
-                var lootPoolIndex = entry.getKey();
-                if (lootPoolIndex >= lootPools.size()) {
-                    SakuraLib.DATAGEN_CONTAINER.LOGGER.error("Loot table {} has {} pools, expected {}", id, lootPools.size(), lootPoolIndex + 1);
-                    continue;
-                }
-
-                var lootPoolBuilder = FabricLootPoolBuilder.copyOf(lootPools.get(lootPoolIndex));
-                for (var arrayEntry : entry.getValue()) {
-                    LootPoolEntry lootTableEntry = arrayEntry.getLeft();
-                    int           sources        = arrayEntry.getRight();
-
-                    if (lootTableEntry == null) continue;
-                    if (!LootSourceHelper.inNumber(sources, setter)) continue;
-
-                    lootPoolBuilder.with(lootTableEntry);
-                }
-
-                lootPools.set(lootPoolIndex, lootPoolBuilder.build());
-            }
-        });
-        isInitialized = true;
-    }
+    static public void init() {}
 
     /**
      * An overloaded version of insertEntry to simplify inserting into the pool with index 0.
@@ -187,13 +134,7 @@ public class LootTableManager {
      * @param insertions a list of LootEntryInserts containing the index of the loot pool, the entry that should be injected and the loot sources
      */
     static public void insertEntries(Identifier lootTable, LootEntryInsert... insertions) {
-        HashMap<Integer, ArrayList<Pair<LootPoolEntry, Integer>>> lootTableEntryList = lootTableEntries.getOrDefault(lootTable, new HashMap<>());
-        for (var insertion : insertions) {
-            ArrayList<Pair<LootPoolEntry, Integer>> lootTableEntryArrayList = lootTableEntryList.getOrDefault(insertion.poolIndex, new ArrayList<>());
-            lootTableEntryArrayList.add(new Pair<>(insertion.entry, insertion.lootSources));
-            lootTableEntryList.put(insertion.poolIndex, lootTableEntryArrayList);
-        }
-        lootTableEntries.put(lootTable, lootTableEntryList);
+        de.sakurajin.sakuralib.loot.v2.LootTableManager.addInsertion(lootTable, insertions);
     }
 
     /**

@@ -1,6 +1,6 @@
 package de.sakurajin.sakuralib;
 
-import de.sakurajin.sakuralib.loot.v1.LootTableManager;
+import de.sakurajin.sakuralib.loot.v2.LootTableManager;
 import de.sakurajin.sakuralib.datagen.v1.DatagenModContainer;
 import de.sakurajin.sakuralib.internal.SakuraLibConfig;
 import de.sakurajin.sakuralib.versionTracker.v1.ModVersionTracker;

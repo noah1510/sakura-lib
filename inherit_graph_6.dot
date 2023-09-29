@@ -7,9 +7,17 @@ digraph "Graphical Class Hierarchy"
   rankdir="LR";
   Node0 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.\lJPageBase",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1JPageBase.html",tooltip="Base class for all pages This only contains the basic data common across all page types."];
   Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
-  Node1 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJImagePage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JImagePage.html",tooltip="A page containing images."];
-  Node0 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJCraftingPage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JCraftingPage.html",tooltip="A page containing 1 or 2 crafting recipes."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
   Node2 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJRecipePage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JRecipePage.html",tooltip="A page containing 1 or 2 recipes."];
   Node0 -> Node3 [dir="back",color="steelblue1",style="solid"];
-  Node3 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJTextPage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html",tooltip="A page containing only text."];
+  Node3 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJEmptyPage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JEmptyPage.html",tooltip=" "];
+  Node0 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJImagePage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JImagePage.html",tooltip="A page containing images."];
+  Node0 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJSmeltingPage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JSmeltingPage.html",tooltip="A page containing 1 or 2 smelting recipes."];
+  Node0 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJTextPage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html",tooltip="A page containing only text."];
+  Node6 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJLinkPage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JLinkPage.html",tooltip="A page containing a link."];
 }

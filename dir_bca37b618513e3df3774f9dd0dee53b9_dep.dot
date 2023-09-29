@@ -11,6 +11,7 @@ digraph "loot"
     graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_bca37b618513e3df3774f9dd0dee53b9.html",tooltip=""]
     dir_bca37b618513e3df3774f9dd0dee53b9 [shape=plaintext, label="loot"];
   dir_e35b6426710ed273fd5fe3875f67818c [label="v1", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e35b6426710ed273fd5fe3875f67818c.html",tooltip=""];
+  dir_dec4cdd6a67a47797f1d2c3284dcdd9a [label="v2", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_dec4cdd6a67a47797f1d2c3284dcdd9a.html",tooltip=""];
   }
   }
 }

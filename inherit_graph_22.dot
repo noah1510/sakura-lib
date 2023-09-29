@@ -5,5 +5,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="de.sakurajin.sakuralib.loot.v1.\lLootTableManager",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootTableManager.html",tooltip="This class is used to inject data into loot tables."];
+  Node0 [label="de.sakurajin.sakuralib.loot.v2.\lLootSourceHelper",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v2_1_1LootSourceHelper.html",tooltip="This helper class allows decoding and encoding of loot table sources."];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="de.sakurajin.sakuralib.loot.v1.\lLootSourceHelper",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootSourceHelper.html",tooltip="This helper class allows decoding and encoding of loot table sources."];
 }

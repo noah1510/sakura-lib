@@ -1,0 +1,10 @@
+digraph "de.sakurajin.sakuralib.loot.v2.table_insert.LootEntryInsert"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="de.sakurajin.sakuralib.loot.v2.table\l_insert.LootEntryInsert",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="A class that represents an entry that should be inserted into a loot table."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="de.sakurajin.sakuralib.loot.v1.\lLootEntryInsert",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootEntryInsert.html",tooltip="A class that represents an entry that should be inserted into a loot table."];
+}

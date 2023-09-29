@@ -82,11 +82,6 @@ $(function() {
 
 <p>This class can be used to create weight distributions for loot tables.  
  <a href="classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootDistributionHelper.html#details">More...</a></p>
-<div class="dynheader">
-Collaboration diagram for de.sakurajin.sakuralib.loot.v1.LootDistributionHelper:</div>
-<div class="dyncontent">
-<div class="center"><img src="classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootDistributionHelper__coll__graph.png" border="0" usemap="#ade_8sakurajin_8sakuralib_8loot_8v1_8LootDistributionHelper_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -98,7 +93,9 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p >This class can be used to create weight distributions for loot tables. </p>
 <p >The following types of distributions are supported:</p><ul>
 <li>power distribution (<dl class="section see"><dt>See also</dt><dd><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v1_1_1LootDistributionHelper.html#a62c7b205c59d399afe5b149e00c3d4bd" title="This method returns a power distribution for the given order and element count.">LootDistributionHelper::getPowerDistribution(int, int)</a>) </dd></dl>
-Other distributions may be added in the future. </li>
+Other distributions may be added in the future. <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>use the individual distributions directly instead. Will be removed in 2.0.0 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>PowerDistribution for the <a class="el" href="namespacede_1_1sakurajin_1_1sakuralib_1_1loot_1_1v2.html">v2</a> implementation </dd></dl>
+</li>
 </ul>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a62c7b205c59d399afe5b149e00c3d4bd" name="a62c7b205c59d399afe5b149e00c3d4bd"></a>
@@ -136,11 +133,7 @@ Other distributions may be added in the future. </li>
 </div><div class="memdoc">
 
 <p>This method returns a power distribution for the given order and element count. </p>
-<p >The distribution is normalized and the sum of all elements is roughly 1. The distribution is cached, so it is not necessary to cache it yourself. </p>
-<p >It is calculated using the following formula:</p><ul>
-<li>totalWeight = sum(i = 0, elementCount - 1, (elementCount - i) ^ order)</li>
-<li>elementWeight(i) = (elementCount - i) ^ order / totalWeight The totalWeight is used to normalize the distribution.</li>
-</ul>
+<p >It passes the value to the <a class="el" href="namespacede_1_1sakurajin_1_1sakuralib_1_1loot_1_1v2.html">v2</a> implementation. </p><dl class="section see"><dt>See also</dt><dd>PowerDistribution for more information.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">order</td><td>the order of the distribution </td></tr>

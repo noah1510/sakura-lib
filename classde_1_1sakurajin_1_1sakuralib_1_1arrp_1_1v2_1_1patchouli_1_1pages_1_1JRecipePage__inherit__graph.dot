@@ -6,5 +6,7 @@ digraph "de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JRecipePage"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJRecipePage",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="A page containing 1 or 2 recipes."];
   Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
-  Node2 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.\lJPageBase",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1JPageBase.html",tooltip="Base class for all pages This only contains the basic data common across all page types."];
+  Node2 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.pages.\lJCraftingPage",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JCraftingPage.html",tooltip="A page containing 1 or 2 crafting recipes."];
+  Node3 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="de.sakurajin.sakuralib.arrp.v2.patchouli.\lJPageBase",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1JPageBase.html",tooltip="Base class for all pages This only contains the basic data common across all page types."];
 }

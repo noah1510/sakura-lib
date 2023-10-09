@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.loot.v1;
 
 import de.sakurajin.sakuralib.loot.v2.table_insert.LootEntryInsert;
+import de.sakurajin.sakuralib.loot.v2.LootSourceHelper;
 
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.util.Identifier;

@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.loot.v1;
 
 import net.minecraft.loot.entry.LootPoolEntry;
+import de.sakurajin.sakuralib.loot.v2.LootSourceHelper;
 
 /**
  * A class that represents an entry that should be inserted into a loot table.

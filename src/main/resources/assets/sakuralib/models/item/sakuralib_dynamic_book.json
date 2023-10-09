@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sakuralib:item/sakuralib_dynamic_book"
+  }
+}

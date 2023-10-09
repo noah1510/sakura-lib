@@ -1,0 +1,10 @@
+{
+  "name": "patchouli_book.sakuralib_dynamic_book.name",
+  "landing_text": "patchouli_book.sakuralib_dynamic_book.landing_text",
+  "version": 2,
+  "creative_tab": "minecraft:tools_and_utilities",
+  "book_texture": "patchouli:textures/gui/book_purple.png",
+  "model": "sakuralib:sakuralib_dynamic_book",
+  "use_resource_pack": true,
+  "i18n": true
+}

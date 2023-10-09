@@ -3,6 +3,7 @@ package de.sakurajin.sakuralib.arrp.v2.patchouli;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JTextPage;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,13 +36,37 @@ public class JPatchouliEntry {
 
     /**
      * Creates a new entry with the mandatory fields set.
+     * You can set the category to null if you play on using {@link #copyWithCategory(String)} to change the category later.
+     * This is the case when DynamicPatchouliCategoryContainer is used.
      * @param name The name of the entry.
      * @param category The category of the entry.
      * @param icon The icon of the entry.
      * @return The created entry.
      */
-    public static JPatchouliEntry create(String name, String category, String icon) {
+    public static JPatchouliEntry create(@NotNull String name, String category, @NotNull String icon) {
         return new JPatchouliEntry(name, category, icon);
+    }
+
+    /**
+     * Creates a copy of this entry with the given category.
+     * @param newCategory The new category for the entry or this if newCategory is the same as the current category.
+     * @return The created entry.
+     */
+    public JPatchouliEntry copyWithCategory(String newCategory){
+        if(newCategory == null) throw new IllegalArgumentException("The new category must not be null");
+        if(newCategory.equals(category)) return this;
+
+        var newEntry = new JPatchouliEntry(name, newCategory, icon);
+        newEntry.pages.addAll(pages);
+        newEntry.advancement = advancement;
+        newEntry.flag = flag;
+        newEntry.priority = priority;
+        newEntry.secret = secret;
+        newEntry.read_by_default = read_by_default;
+        newEntry.sortnum = sortnum;
+        newEntry.turnin = turnin;
+        newEntry.extra_recipe_mappings.putAll(extra_recipe_mappings);
+        return newEntry;
     }
 
     /**
@@ -173,6 +198,7 @@ public class JPatchouliEntry {
         }else{
             throw new IllegalArgumentException("The first page of an entry must be a JTextPage");
         }
+        if(category == null) throw new IllegalArgumentException("An entry must have a category");
 
         //create the entry json object with the mandatory fields
         JsonObject entryJson = new JsonObject();

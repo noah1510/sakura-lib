@@ -1,5 +1,6 @@
 package de.sakurajin.sakuralib.loot.v2.table_insert;
 
+import de.sakurajin.sakuralib.SakuraLib;
 import de.sakurajin.sakuralib.loot.v2.LootSourceHelper;
 import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
@@ -62,6 +63,9 @@ public class LootTableInsertManager {
         if (!LootTableEntryProviders.containsKey(tableID)) {
             return;
         }
+
+        //print debug message to notify that the loot table is being injected into
+        SakuraLib.DATAGEN_CONTAINER.LOGGER.debug("Injecting loot table entries into loot table: " + tableID.toString());
 
         //get all entry providers and the loot pools
         var lootTableEntryProviders = LootTableEntryProviders.get(tableID);

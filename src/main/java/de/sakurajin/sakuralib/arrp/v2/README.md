@@ -16,12 +16,12 @@ The following page types are also implemented:
 * JImagePage (patchouli:image)
 * JCraftingPage (patchouli:crafting)
 * JSmeltingPage (patchouli:smelting)
+* JMultiblockPage (patchouli:multiblock)
 * JLinkPage (patchouli:link)
 * JEmptyPage (patchouli:empty)
 
 The following page types are not implemented yet:
 
-* JMultiblockPage (patchouli:multiblock)
 * JEntityPage (patchouli:entity)
 * JSpotlightPage (patchouli:spotlight)
 * JRelationsPage (patchouli:relations)

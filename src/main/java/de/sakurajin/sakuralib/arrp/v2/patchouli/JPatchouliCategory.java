@@ -73,10 +73,22 @@ public class JPatchouliCategory {
     /**
      * Sets the category to be secret.
      * This will cause it to be hidden until it is unlocked.
+     * @deprecated Use {@link #isSecret()} instead. Will be removed in 2.0.0
      * @return The entry itself for method chaining.
      */
+    @Deprecated(since = "1.4.1", forRemoval = true)
     public JPatchouliCategory setSecret(boolean secret) {
         this.secret = secret;
+        return this;
+    }
+
+    /**
+     * Sets the category to be secret.
+     * This will cause it to be hidden until it is unlocked.
+     * @return The entry itself for method chaining.
+     */
+    public JPatchouliCategory isSecret() {
+        this.secret = true;
         return this;
     }
 

@@ -152,9 +152,11 @@ public class DatagenModContainer{
     /**
      * Generate and register a patchouli book.
      * The provided book will be converted to a json string and then registered into the resource pack.
+     * @deprecated Try migration to {@link de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager}
      * @param bookname The name of the book.
      * @param book The book to register.
      */
+    @Deprecated(forRemoval = true, since = "1.5.0")
     public void registerPatchouliBook(String bookname, JPatchouliBook book){
         var location = getSimpleID("book.json", "patchouli_books/"+bookname);
         RESOURCE_PACK.addData(location, book.toString().getBytes());
@@ -164,9 +166,11 @@ public class DatagenModContainer{
      * Generate and register a patchouli category.
      * This will set the category ID to the category name.
      * see {@link #registerPatchouliCategory(String, String, JPatchouliCategory)} for more information.
+     * @deprecated Try migration to {@link de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager}
      * @param bookname The name of the book this category belongs to.
      * @param category The category to register.
      */
+    @Deprecated(forRemoval = true, since = "1.5.0")
     public void registerPatchouliCategory(String bookname, JPatchouliCategory category){
         registerPatchouliCategory(bookname, category.getName(), category);
     }
@@ -174,10 +178,12 @@ public class DatagenModContainer{
     /**
      * Generate and register a patchouli category.
      * This will create the json and register it into the resource pack.
+     * @deprecated Try migration to {@link de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager}
      * @param bookname The name of the book this category belongs to.
      * @param CategoryID The id of the category.
      * @param category The category to register.
      */
+    @Deprecated(forRemoval = true, since = "1.5.0")
     public void registerPatchouliCategory(String bookname, String CategoryID, JPatchouliCategory category){
         var location = getSimpleID(CategoryID+".json", "patchouli_books/"+bookname+"/en_us/categories");
         RESOURCE_PACK.addAsset(location, category.toString().getBytes());
@@ -186,10 +192,12 @@ public class DatagenModContainer{
     /**
      * Generate and register a patchouli entry.
      * This will create the json and register it into the resource pack.
+     * @deprecated Try migration to {@link de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager}
      * @param bookname The name of the book this entry belongs to.
      * @param locale The locale of the entry.
      * @param entry The entry to register.
      */
+    @Deprecated(forRemoval = true, since = "1.5.0")
     public void registerPatchouliEntry(String bookname, String locale, JPatchouliEntry entry){
         String category = entry.getCategory();
         if(category.split(":").length == 2){
@@ -202,10 +210,12 @@ public class DatagenModContainer{
     /**
      * Register multiple entries at once.
      * Check out {@link #registerPatchouliEntry(String, String, JPatchouliEntry)} for more information.
+     * @deprecated Try migration to {@link de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager}
      * @param bookname The name of the book this entry belongs to.
      * @param locale The locale of the entry.
      * @param entries The entries to register.
      */
+    @Deprecated(forRemoval = true, since = "1.5.0")
     public void registerPatchouliEntries(String bookname, String locale, JPatchouliEntry... entries){
         for(JPatchouliEntry entry : entries){
             registerPatchouliEntry(bookname, locale, entry);
@@ -215,9 +225,11 @@ public class DatagenModContainer{
     /**
      * Register a patchouli entry with the en_us as locale.
      * see {@link #registerPatchouliEntry(String, String, JPatchouliEntry)} for more information.
+     * @deprecated Try migration to {@link de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager}
      * @param bookname The name of the book this entry belongs to.
      * @param entry The entry to register.
      */
+    @Deprecated(forRemoval = true, since = "1.5.0")
     public void registerPatchouliEntry(String bookname, JPatchouliEntry entry){
         registerPatchouliEntry(bookname, "en_us", entry);
     }
@@ -225,9 +237,11 @@ public class DatagenModContainer{
     /**
      * Register multiple entries at once with the en_us as locale.
      * see {@link #registerPatchouliEntries(String, String, JPatchouliEntry...)} for more information.
+     * @deprecated Try migration to {@link de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager}
      * @param bookname The name of the book this entry belongs to.
      * @param entries The entries to register.
      */
+    @Deprecated(forRemoval = true, since = "1.5.0")
     public void registerPatchouliEntries(String bookname, JPatchouliEntry... entries){
         registerPatchouliEntries(bookname, "en_us", entries);
     }

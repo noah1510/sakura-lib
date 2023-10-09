@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.5.0
+
+* Updates to arrp.patchouli
+  * Adding JMultiblockPage
+  * Deprecate JPachouliCategory#setSecret (use JPachouliCategory#isSecret instead)
+* Added NameIDPair class (this isa pair of a name and its ID together with some helpful access functions)
+* New Patchouli Book API:
+  * Sakuralib now adds a single book
+  * All mods can add categories to that book using the PatchouliDataManager
+  * All categories can have sub categories and entries
+  * The old API is still available but are marked as deprecated
+* Added example data package (by default this data is only loaded in a dev environment can always be loaded by setting the config option)
+  * Adds a command to dump the sakuralib arrp data
+
 ## 1.4.0
 
 * switch to maven modrinth for arrp

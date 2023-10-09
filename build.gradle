@@ -64,6 +64,7 @@ dependencies {
 
     //add numismatic overhaul as compile only to create the TradeBuilder
     modCompileOnly("maven.modrinth:numismatic-overhaul:${numismatic_version}")
+    modCompileOnly("maven.modrinth:patchouli:${patchouli_version}")
 }
 
 processResources {

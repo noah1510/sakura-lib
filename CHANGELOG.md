@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.5.1
+
+* Remove the REGISTER_PATCHOULI_DATA_ON_RELOAD config option
+* Fixing the `PatchouliDataManager` to actually work as intended
+  * Adding a minecraft category by default to have a common place for all vanilla entries
+  * **After you added your data to `DynamicPatchouliCategoryContainer` call `registerData` on the main container!**
+  * getDynamicCategory now returns an optional
+
 ## 1.5.0
 
 * Updates to arrp.patchouli

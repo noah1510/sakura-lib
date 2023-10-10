@@ -5,9 +5,6 @@
   "text.config.SakuraLib.option.ALWAYS_ADD_EXAMPLE_DATA": "Füge Beispiel Daten immer hinzu",
   "text.config.SakuraLib.option.ALWAYS_ADD_EXAMPLE_DATA.tooltip": "Fügt immer Beispiel Daten hinzu. An sonsten werden diese nur in einer Entwicklungs Umgebung hinzugefügt.",
 
-  "text.config.SakuraLib.option.REGISTER_PATCHOULI_DATA_ON_RELOAD": "Registriere Patchouli Daten beim Neuladen",
-  "text.config.SakuraLib.option.REGISTER_PATCHOULI_DATA_ON_RELOAD.tooltip": "Registriert die Patchouli Daten neu, wenn die Welt neugeladen wird. Standardmäßig werden die Daten nur beim Laden einer Welt registriert.",
-
   "text.config.SakuraLib.section.ModTracking": "Mod Versions Checks",
   "text.config.SakuraLib.option.ENABLE_WARNING_SCREEN": "Aktiviere Warnbildschirm",
   "text.config.SakuraLib.option.ENABLE_WARNING_SCREEN.tooltip": "Aktiviert den Warnbildschirm, der angezeigt wird, wenn eine Welt mit geänderten Mod Versionen geladen wird.\nStandardmäßig gibt es nur Warnungen bei Versions Verringerungen und entfernten Mods.",
@@ -80,5 +77,7 @@
   ],
 
   "patchouli_book.sakuralib_dynamic_book.name" : "Allwissendes Buch",
-  "patchouli_book.sakuralib_dynamic_book.landing_text" : "Dieses Buch beinhaltet alle dynamisch erzueugten Inhalte, die von Mods hinzugefügt wurden."
+  "patchouli_book.sakuralib_dynamic_book.landing_text" : "Dieses Buch beinhaltet alle dynamisch erzueugten Inhalte, die von Mods hinzugefügt wurden.",
+  "patchouli_book.sakuralib_dynamic_book.minecraft.name" : "Minecraft",
+  "patchouli_book.sakuralib_dynamic_book.minecraft.maintext" : "Das ist die Hauptkategorie, in der Minecraft Inhalte erläutert werden."
 }

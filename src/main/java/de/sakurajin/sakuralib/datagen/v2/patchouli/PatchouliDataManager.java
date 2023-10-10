@@ -6,6 +6,7 @@ import de.sakurajin.sakuralib.util.v1.NameIDPair;
 import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 /**
  * This is the main class to add dynamic patchouli data.
@@ -17,18 +18,27 @@ import java.util.HashMap;
  * @see DynamicPatchouliCategoryContainer
  */
 public class PatchouliDataManager {
+
+    /**
+     * Keep track of all registered dynamic categories.
+     * This is used to rebuild the book when needed.
+     */
+    private static final HashMap<String, DynamicPatchouliCategoryContainer> DYNAMIC_MOD_CATEGORIES = new HashMap<>();
+
     /**
      * The name and ID of the SakuraLib book.
      * This is the dynamic book which all dynamic categories are added to.
      */
     public static final NameIDPair SAKURALIB_BOOK = new NameIDPair("sakuralib_dynamic_book", SakuraLib.DATAGEN_CONTAINER);
 
-    /**
-     * Keep track of all registered dynamic categories.
-     * This is used to rebuild the book when needed.
-     * All data will be re-registered when /reload is called.
-     */
-    private static final HashMap<String, DynamicPatchouliCategoryContainer> DYNAMIC_MOD_CATEGORIES = new HashMap<>();
+    public static final DynamicPatchouliCategoryContainer MINECRAFT_CATEGORY = getOrCreateDynamicCategory(
+        "minecraft",
+        JPatchouliCategory.create(
+            "patchouli_book.sakuralib_dynamic_book.minecraft.name",
+            "patchouli_book.sakuralib_dynamic_book.minecraft.maintext",
+            "minecraft:grass_block"
+        )
+    );
 
     /**
      * Get the path ID for the category file for the SakuraLib book.
@@ -57,8 +67,13 @@ public class PatchouliDataManager {
      * @param modID The mod ID of the mod.
      * @return The dynamic category container for the given mod or null if there is none.
      */
-    public static DynamicPatchouliCategoryContainer getDynamicCategory(String modID) {
-        return DYNAMIC_MOD_CATEGORIES.get(modID);
+    public static Optional<DynamicPatchouliCategoryContainer> getDynamicCategory(String modID) {
+        var category = DYNAMIC_MOD_CATEGORIES.get(modID);
+        if (category == null) {
+            return Optional.empty();
+        } else {
+            return Optional.of(category);
+        }
     }
 
     /**
@@ -80,12 +95,14 @@ public class PatchouliDataManager {
 
     /**
      * Register all data into the sakuralib resource pack.
-     * This function may be called by mods that add data if they want to make sure their data is added to the pack.
-     * This function is called when the world is loaded.
+     * This function is used to simply call the registerData function of all registered dynamic categories.
+     * This may be used instead of calling registerData on each category individually.
+     * Since this adds ALL data to the resource pack it is recommended to only call the registerData function
+     * of all categories YOU modified.
      */
     public static void registerRRPData() {
         for (var category : DYNAMIC_MOD_CATEGORIES.values()) {
-            category.registerData(SakuraLib.DATAGEN_CONTAINER.RESOURCE_PACK);
+            category.registerData();
         }
     }
 

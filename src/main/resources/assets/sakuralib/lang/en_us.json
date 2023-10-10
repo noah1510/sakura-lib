@@ -4,8 +4,6 @@
 
   "text.config.SakuraLib.option.ALWAYS_ADD_EXAMPLE_DATA": "Always add example data",
   "text.config.SakuraLib.option.ALWAYS_ADD_EXAMPLE_DATA.tooltip": "This also adds the example data outside of an development environment.",
-  "text.config.SakuraLib.option.REGISTER_PATCHOULI_DATA_ON_RELOAD": "Register the patchouli data when reloading the game",
-  "text.config.SakuraLib.option.REGISTER_PATCHOULI_DATA_ON_RELOAD.tooltip": "This adds the patchouli data to the runtime resource pack when reloading the game. By default this is only done when loading a world.",
 
   "text.config.SakuraLib.section.ModTracking": "Mod Version Tracking",
   "text.config.SakuraLib.option.ENABLE_WARNING_SCREEN": "Enable the warning screen",
@@ -78,5 +76,7 @@
     ],
 
   "patchouli_book.sakuralib_dynamic_book.name" : "Book of everything",
-  "patchouli_book.sakuralib_dynamic_book.landing_text" : "This is a dynamically created book. It contains all entries from all mods that use SakuraLib's dynamic book system."
+  "patchouli_book.sakuralib_dynamic_book.landing_text" : "This is a dynamically created book. It contains all entries from all mods that use SakuraLib's dynamic book system.",
+  "patchouli_book.sakuralib_dynamic_book.minecraft.name" : "Minecraft",
+  "patchouli_book.sakuralib_dynamic_book.minecraft.maintext" : "This is the main category containing descriptions about core minecraft features."
 }

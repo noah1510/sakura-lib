@@ -10,6 +10,7 @@ import io.wispforest.owo.itemgroup.OwoItemSettings;
 import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
 import net.devtech.arrp.api.RRPCallback;
 import net.devtech.arrp.api.RuntimeResourcePack;
+import net.devtech.arrp.api.SidedRRPCallback;
 import net.devtech.arrp.json.blockstate.JState;
 import net.devtech.arrp.json.blockstate.JVariant;
 import net.devtech.arrp.json.loot.JEntry;
@@ -67,7 +68,7 @@ public class DatagenModContainer{
             net.fabricmc.fabric.api.event.Event<RRPCallback> event
     ){
         this.MOD_ID = MOD_ID;
-        RESOURCE_PACK = RuntimeResourcePack.create(MOD_ID+":resources");
+        RESOURCE_PACK = RuntimeResourcePack.create(MOD_ID+"_resources");
         LOGGER = LoggerFactory.getLogger(MOD_ID);
 
         if(groupIconSupplier == null){

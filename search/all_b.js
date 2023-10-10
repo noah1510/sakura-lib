@@ -11,12 +11,13 @@ var searchData=
   ['metadatahelper_2ejava_8',['MetadataHelper.java',['../MetadataHelper_8java.html',1,'']]],
   ['minchance_9',['minChance',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1processor_1_1PositionPredicate.html#ac775250bd7afba7cae1f6ebe84660004',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::processor::PositionPredicate']]],
   ['mindist_10',['minDist',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1processor_1_1PositionPredicate.html#ad1bb91de48b239cd5ca91094d14d6df0',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::processor::PositionPredicate']]],
-  ['mixinplugin_11',['MixinPlugin',['../classde_1_1sakurajin_1_1sakuralib_1_1mixin_1_1MixinPlugin.html',1,'de::sakurajin::sakuralib::mixin']]],
-  ['mixinplugin_2ejava_12',['MixinPlugin.java',['../MixinPlugin_8java.html',1,'']]],
-  ['mod_13',['MOD',['../classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v2_1_1LootSourceHelper.html#a0ed006b682944c334151abd966df7e32',1,'de::sakurajin::sakuralib::loot::v2::LootSourceHelper']]],
-  ['mod_5fid_14',['MOD_ID',['../classde_1_1sakurajin_1_1sakuralib_1_1SakuraLib.html#a0b7da24d7f20ea4b8a0d74aa5a892393',1,'de.sakurajin.sakuralib.SakuraLib.MOD_ID()'],['../classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#af8ebe21953e58fe0b1a737c464aff1c9',1,'de.sakurajin.sakuralib.datagen.v1.DatagenModContainer.MOD_ID()']]],
-  ['modupdatescreen_15',['modUpdateScreen',['../classde_1_1sakurajin_1_1sakuralib_1_1internal_1_1ui_1_1modUpdateScreen.html',1,'de.sakurajin.sakuralib.internal.ui.modUpdateScreen'],['../classde_1_1sakurajin_1_1sakuralib_1_1internal_1_1ui_1_1modUpdateScreen.html#ab613c8d63c2a64e66cac9b00e82bea66',1,'de.sakurajin.sakuralib.internal.ui.modUpdateScreen.modUpdateScreen()']]],
-  ['modupdatescreen_2ejava_16',['modUpdateScreen.java',['../modUpdateScreen_8java.html',1,'']]],
-  ['modversiontracker_17',['ModVersionTracker',['../classde_1_1sakurajin_1_1sakuralib_1_1versionTracker_1_1v1_1_1ModVersionTracker.html',1,'de::sakurajin::sakuralib::versionTracker::v1']]],
-  ['modversiontracker_2ejava_18',['ModVersionTracker.java',['../ModVersionTracker_8java.html',1,'']]]
+  ['minecraft_5fcategory_11',['MINECRAFT_CATEGORY',['../classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v2_1_1patchouli_1_1PatchouliDataManager.html#a16aa27c4e6adcec7776175cdf7399c23',1,'de::sakurajin::sakuralib::datagen::v2::patchouli::PatchouliDataManager']]],
+  ['mixinplugin_12',['MixinPlugin',['../classde_1_1sakurajin_1_1sakuralib_1_1mixin_1_1MixinPlugin.html',1,'de::sakurajin::sakuralib::mixin']]],
+  ['mixinplugin_2ejava_13',['MixinPlugin.java',['../MixinPlugin_8java.html',1,'']]],
+  ['mod_14',['MOD',['../classde_1_1sakurajin_1_1sakuralib_1_1loot_1_1v2_1_1LootSourceHelper.html#a0ed006b682944c334151abd966df7e32',1,'de::sakurajin::sakuralib::loot::v2::LootSourceHelper']]],
+  ['mod_5fid_15',['MOD_ID',['../classde_1_1sakurajin_1_1sakuralib_1_1SakuraLib.html#a0b7da24d7f20ea4b8a0d74aa5a892393',1,'de.sakurajin.sakuralib.SakuraLib.MOD_ID()'],['../classde_1_1sakurajin_1_1sakuralib_1_1datagen_1_1v1_1_1DatagenModContainer.html#af8ebe21953e58fe0b1a737c464aff1c9',1,'de.sakurajin.sakuralib.datagen.v1.DatagenModContainer.MOD_ID()']]],
+  ['modupdatescreen_16',['modUpdateScreen',['../classde_1_1sakurajin_1_1sakuralib_1_1internal_1_1ui_1_1modUpdateScreen.html',1,'de.sakurajin.sakuralib.internal.ui.modUpdateScreen'],['../classde_1_1sakurajin_1_1sakuralib_1_1internal_1_1ui_1_1modUpdateScreen.html#ab613c8d63c2a64e66cac9b00e82bea66',1,'de.sakurajin.sakuralib.internal.ui.modUpdateScreen.modUpdateScreen()']]],
+  ['modupdatescreen_2ejava_17',['modUpdateScreen.java',['../modUpdateScreen_8java.html',1,'']]],
+  ['modversiontracker_18',['ModVersionTracker',['../classde_1_1sakurajin_1_1sakuralib_1_1versionTracker_1_1v1_1_1ModVersionTracker.html',1,'de::sakurajin::sakuralib::versionTracker::v1']]],
+  ['modversiontracker_2ejava_19',['ModVersionTracker.java',['../ModVersionTracker_8java.html',1,'']]]
 ];

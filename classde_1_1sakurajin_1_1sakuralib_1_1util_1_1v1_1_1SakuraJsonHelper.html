@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">de.sakurajin.sakuralib.util.v1.SakuraJsonHelper Class Reference</div></div>
 </div><!--header-->
@@ -85,9 +86,21 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aea261343fa88386f52a33c229e4f0d58"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#aea261343fa88386f52a33c229e4f0d58">toPrettyJson</a> (JsonElement element)</td></tr>
+<tr class="memdesc:aea261343fa88386f52a33c229e4f0d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses the Gson pretty printer to create a pretty json string.  <a href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#aea261343fa88386f52a33c229e4f0d58">More...</a><br /></td></tr>
+<tr class="separator:aea261343fa88386f52a33c229e4f0d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a1da7588ab8d8b13ae6bee86774394"><td class="memItemLeft" align="right" valign="top">static byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#a85a1da7588ab8d8b13ae6bee86774394">toPrettyBytes</a> (JsonElement element)</td></tr>
+<tr class="memdesc:a85a1da7588ab8d8b13ae6bee86774394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directly converts a json element to a byte array.  <a href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#a85a1da7588ab8d8b13ae6bee86774394">More...</a><br /></td></tr>
+<tr class="separator:a85a1da7588ab8d8b13ae6bee86774394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e99e0c937cd8498798b14acad75efb7"><td class="memItemLeft" align="right" valign="top">static JsonObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#a0e99e0c937cd8498798b14acad75efb7">merge</a> (JsonObject... objects)</td></tr>
 <tr class="memdesc:a0e99e0c937cd8498798b14acad75efb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function mergers all keys from the given objects into a new object.  <a href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#a0e99e0c937cd8498798b14acad75efb7">More...</a><br /></td></tr>
 <tr class="separator:a0e99e0c937cd8498798b14acad75efb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ad9340e63b1eeacc871f14dbbeb97d2fc"><td class="memItemLeft" align="right" valign="top">static final Gson&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#ad9340e63b1eeacc871f14dbbeb97d2fc">GSON</a> = new GsonBuilder().setPrettyPrinting().create()</td></tr>
+<tr class="memdesc:ad9340e63b1eeacc871f14dbbeb97d2fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Gson instance that is used to create pretty json strings.  <a href="classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1SakuraJsonHelper.html#ad9340e63b1eeacc871f14dbbeb97d2fc">More...</a><br /></td></tr>
+<tr class="separator:ad9340e63b1eeacc871f14dbbeb97d2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This class contains helper functions for working with json. </p>
@@ -125,6 +138,102 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The merged object. </dd></dl>
+
+</div>
+</div>
+<a id="a85a1da7588ab8d8b13ae6bee86774394" name="a85a1da7588ab8d8b13ae6bee86774394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a1da7588ab8d8b13ae6bee86774394">&#9670;&#160;</a></span>toPrettyBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte[] de.sakurajin.sakuralib.util.v1.SakuraJsonHelper.toPrettyBytes </td>
+          <td>(</td>
+          <td class="paramtype">JsonElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Directly converts a json element to a byte array. </p>
+<p >It uses the Gson pretty printer to create a pretty json string and then converts it to a byte array. This is useful since Arrp requires a byte array for the json files.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td>The element to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The byte array. </dd></dl>
+
+</div>
+</div>
+<a id="aea261343fa88386f52a33c229e4f0d58" name="aea261343fa88386f52a33c229e4f0d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea261343fa88386f52a33c229e4f0d58">&#9670;&#160;</a></span>toPrettyJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String de.sakurajin.sakuralib.util.v1.SakuraJsonHelper.toPrettyJson </td>
+          <td>(</td>
+          <td class="paramtype">JsonElement&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uses the Gson pretty printer to create a pretty json string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td>The element to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The pretty json string. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad9340e63b1eeacc871f14dbbeb97d2fc" name="ad9340e63b1eeacc871f14dbbeb97d2fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9340e63b1eeacc871f14dbbeb97d2fc">&#9670;&#160;</a></span>GSON</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Gson de.sakurajin.sakuralib.util.v1.SakuraJsonHelper.GSON = new GsonBuilder().setPrettyPrinting().create()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A Gson instance that is used to create pretty json strings. </p>
 
 </div>
 </div>

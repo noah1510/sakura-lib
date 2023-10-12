@@ -34,8 +34,8 @@ public class PatchouliDataManager {
     public static final DynamicPatchouliCategoryContainer MINECRAFT_CATEGORY = getOrCreateDynamicCategory(
         "minecraft",
         JPatchouliCategory.create(
-            "patchouli_book.sakuralib_dynamic_book.minecraft.name",
-            "patchouli_book.sakuralib_dynamic_book.minecraft.maintext",
+            "sakuralib_dynamic_book.minecraft.name",
+            "sakuralib_dynamic_book.minecraft.maintext",
             "minecraft:grass_block"
         )
     );
@@ -51,14 +51,26 @@ public class PatchouliDataManager {
     }
 
     /**
-     * Get the path ID for an entry in the given category fot the SakuraLib book.
+     * Get the path ID for an entry in the given category fot the SakuraLib book for the default locale.
      *
      * @param categoryName The name of the category.
      * @param entryName    The name of the entry.
      * @return The path ID for the entry.
      */
     public static Identifier getEntryPath(String categoryName, String entryName) {
-        return new Identifier(SakuraLib.MOD_ID, "patchouli_books/" + SAKURALIB_BOOK.name() + "/en_us/entries/" + categoryName + "/" + entryName + ".json");
+        return getEntryPath(categoryName, entryName, "en_us");
+    }
+
+    /**
+     * Get the path ID for an entry in the given category fot the SakuraLib book.
+     *
+     * @param categoryName The name of the category.
+     * @param entryName    The name of the entry.
+     * @param locale       The locale of the entry.
+     * @return The path ID for the entry.
+     */
+    public static Identifier getEntryPath(String categoryName, String entryName, String locale) {
+        return new Identifier(SakuraLib.MOD_ID, "patchouli_books/" + SAKURALIB_BOOK.name() + "/" + locale + "/entries/" + categoryName + "/" + entryName + ".json");
     }
 
     /**

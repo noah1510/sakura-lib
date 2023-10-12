@@ -75,8 +75,8 @@
     "."
     ],
 
-  "patchouli_book.sakuralib_dynamic_book.name" : "Book of everything",
-  "patchouli_book.sakuralib_dynamic_book.landing_text" : "This is a dynamically created book. It contains all entries from all mods that use SakuraLib's dynamic book system.",
-  "patchouli_book.sakuralib_dynamic_book.minecraft.name" : "Minecraft",
-  "patchouli_book.sakuralib_dynamic_book.minecraft.maintext" : "This is the main category containing descriptions about core minecraft features."
+  "sakuralib_dynamic_book.name" : "Book of everything",
+  "sakuralib_dynamic_book.landing_text" : "This is a dynamically created book. It contains all entries from all mods that use SakuraLib's dynamic book system.",
+  "sakuralib_dynamic_book.minecraft.name" : "Minecraft",
+  "sakuralib_dynamic_book.minecraft.maintext" : "This is the main category containing descriptions about core minecraft features."
 }

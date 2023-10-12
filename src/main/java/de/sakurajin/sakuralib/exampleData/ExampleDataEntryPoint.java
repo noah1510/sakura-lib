@@ -5,7 +5,10 @@ import de.sakurajin.sakuralib.SakuraLib;
 import de.sakurajin.sakuralib.arrp.v2.patchouli.JPatchouliEntry;
 import de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JCraftingPage;
 import de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JTextPage;
+import de.sakurajin.sakuralib.datagen.v2.DynamicOwOLangManager;
 import de.sakurajin.sakuralib.datagen.v2.patchouli.PatchouliDataManager;
+import de.sakurajin.sakuralib.util.v1.JsonObjectBuilder;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.command.CommandManager;
@@ -33,18 +36,40 @@ public class ExampleDataEntryPoint {
         //The function for that is getOrCreateDynamicCategory.
         //For this case the final variable would be PatchouliBookGeneration.MINECRAFT_CATEGORY.
         var minecraftCategory = PatchouliDataManager.getDynamicCategory("minecraft");
-        if(minecraftCategory.isPresent()) {
-            minecraftCategory.get().addPatchouliEntry(
+        if (minecraftCategory.isPresent()) {
+            minecraftCategory.get().add(
                 JPatchouliEntry
                     .create(
                         "most_important_item",
                         null,
                         "minecraft:netherite_hoe"
-                    ).addPage(JTextPage.create("This is the most important item in the game."))
+                    ).addPage(JTextPage.create("sakuralib_dynamic_book.minecraft.most_important_item.description"))
                     .addPage(JCraftingPage.create("minecraft:netherite_hoe"))
             );
             minecraftCategory.get().registerData();
         }
+
+        //add an owo translation key for the description of the example page
+        //This uses the DynamicOwOLangManager to add this rich translation key to the rrp.
+        //Note that the color is ignored here since patchouli does use its own color syntax.
+        DynamicOwOLangManager.addGlobalEntry(
+            "sakuralib_dynamic_book.minecraft.most_important_item.description",
+            SakuraJsonHelper.createArray(
+                JsonObjectBuilder.create().add("text", "This is the most important item in the game").add("color", "red").build()
+            )
+        );
+
+        //This adds the rich translation example from the owo lib documentation.
+        //The shard part of the echo shard item is colored blue.
+        DynamicOwOLangManager.addEntry(
+            "en_us",
+            "item.minecraft.echo_shard",
+            SakuraJsonHelper.createArray(
+                "Echo ",
+                JsonObjectBuilder.create().add("text", "Shard").add("color", "#0096FF").build()
+            )
+        );
+        DynamicOwOLangManager.updateRRP();
     }
 
     /**

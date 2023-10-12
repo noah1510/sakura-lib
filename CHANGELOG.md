@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.5.2
+
+* Simplified the DynamicPatchouliCategoryContainer functions
+  * The old add functions are marked as deprecated
+  * The new functions are simply called add (both for entries and categories)
+* Adding DynamicOwOLangManager to add lang entries with rich text support to the rrp
+* Adding SakuraJsonHelper to simplify some json annoyances
+* Adding a JsonObjectBuilder to simplify creating Json Objects
+* Adding a GenericsHelper to simplify some stuff around generics
+* Updated translation files
+
 ## 1.5.1
 
 * Remove the REGISTER_PATCHOULI_DATA_ON_RELOAD config option

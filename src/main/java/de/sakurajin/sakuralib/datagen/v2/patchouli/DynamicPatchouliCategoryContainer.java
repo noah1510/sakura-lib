@@ -97,7 +97,7 @@ public class DynamicPatchouliCategoryContainer {
      * @param categoryName The name of the category.
      * @return The added category container that can be used to add entries to that category.
      */
-    public DynamicPatchouliCategoryContainer addCategory(JPatchouliCategory categoryData, String categoryName) {
+    public DynamicPatchouliCategoryContainer add(JPatchouliCategory categoryData, String categoryName) {
         categoryData.setParent(this.categoryName.IDString());
         var subContainer = new DynamicPatchouliCategoryContainer(this.categoryName, categoryName, categoryData);
         this.subCategories.add(subContainer);
@@ -105,13 +105,13 @@ public class DynamicPatchouliCategoryContainer {
     }
 
     /**
-     * Same as {@link #addCategory(JPatchouliCategory, String)} but uses the name of the category as the ID.
+     * Same as {@link #add(JPatchouliCategory, String)} but uses the name of the category as the ID.
      *
      * @param categoryData The category to add.
      * @return The added category container.
      */
-    public DynamicPatchouliCategoryContainer addCategory(JPatchouliCategory categoryData) {
-        return addCategory(categoryData, categoryData.getName());
+    public DynamicPatchouliCategoryContainer add(JPatchouliCategory categoryData) {
+        return add(categoryData, categoryData.getName());
     }
 
     /**
@@ -121,43 +121,43 @@ public class DynamicPatchouliCategoryContainer {
      * @param locale The locale of the entry.
      * @param entry  The entry to register.
      */
-    public void addPatchouliEntry(String locale, JPatchouliEntry entry) {
-        var location       = PatchouliDataManager.getEntryPath(categoryName.name(), entry.getName());
+    public void add(String locale, JPatchouliEntry entry) {
+        var location       = PatchouliDataManager.getEntryPath(categoryName.name(), entry.getName(), locale);
         var correctedEntry = entry.copyWithCategory(categoryName.IDString());
         addedEntries.put(location, correctedEntry);
     }
 
     /**
      * Register multiple entries at once.
-     * Check out {@link #addPatchouliEntry(String, JPatchouliEntry)} for more information.
+     * Check out {@link #add(String, JPatchouliEntry)} for more information.
      *
      * @param locale  The locale of the entry.
      * @param entries The entries to register.
      */
-    public void addPatchouliEntries(String locale, JPatchouliEntry... entries) {
+    public void add(String locale, JPatchouliEntry... entries) {
         for (JPatchouliEntry entry : entries) {
-            addPatchouliEntry(locale, entry);
+            add(locale, entry);
         }
     }
 
     /**
      * Register a patchouli entry with the en_us as locale.
-     * see {@link #addPatchouliEntry(String, JPatchouliEntry)} for more information.
+     * see {@link #add(String, JPatchouliEntry)} for more information.
      *
      * @param entry The entry to register.
      */
-    public void addPatchouliEntry(JPatchouliEntry entry) {
-        addPatchouliEntry("en_us", entry);
+    public void add(JPatchouliEntry entry) {
+        add("en_us", entry);
     }
 
     /**
      * Register multiple entries at once with the en_us as locale.
-     * see {@link #addPatchouliEntries(String, JPatchouliEntry...)} for more information.
+     * see {@link #add(String, JPatchouliEntry...)} for more information.
      *
      * @param entries The entries to register.
      */
-    public void addPatchouliEntries(JPatchouliEntry... entries) {
-        addPatchouliEntries("en_us", entries);
+    public void add(JPatchouliEntry... entries) {
+        add("en_us", entries);
     }
 
     /**
@@ -192,6 +192,76 @@ public class DynamicPatchouliCategoryContainer {
         for (var category : subCategories) {
             category.registerData(resourcePack);
         }
+    }
+
+    /**
+     * Adds a sub category to this category.
+     * This automatically adds this category as a sub-category of the main category.
+     *
+     * @param categoryData The category to add.
+     * @param categoryName The name of the category.
+     * @return The added category container that can be used to add entries to that category.
+     */
+    @Deprecated(since = "0.5.2", forRemoval = true)
+    public DynamicPatchouliCategoryContainer addCategory(JPatchouliCategory categoryData, String categoryName) {
+        return add(categoryData, categoryName);
+    }
+
+    /**
+     * Same as {@link #addCategory(JPatchouliCategory, String)} but uses the name of the category as the ID.
+     *
+     * @param categoryData The category to add.
+     * @return The added category container.
+     */
+    @Deprecated(since = "0.5.2", forRemoval = true)
+    public DynamicPatchouliCategoryContainer addCategory(JPatchouliCategory categoryData) {
+        return add(categoryData, categoryData.getName());
+    }
+
+    /**
+     * Generate and register a patchouli entry.
+     * This will create the json and register it into the resource pack.
+     *
+     * @param locale The locale of the entry.
+     * @param entry  The entry to register.
+     */
+    @Deprecated(since = "0.5.2", forRemoval = true)
+    public void addPatchouliEntry(String locale, JPatchouliEntry entry) {
+        add(locale, entry);
+    }
+
+    /**
+     * Register multiple entries at once.
+     * Check out {@link #addPatchouliEntry(String, JPatchouliEntry)} for more information.
+     *
+     * @param locale  The locale of the entry.
+     * @param entries The entries to register.
+     */
+    @Deprecated(since = "0.5.2", forRemoval = true)
+    public void addPatchouliEntries(String locale, JPatchouliEntry... entries) {
+        add(locale, entries);
+    }
+
+    /**
+     * Register a patchouli entry with the en_us as locale.
+     * see {@link #addPatchouliEntry(String, JPatchouliEntry)} for more information.
+     *
+     * @param entry The entry to register.
+     */
+    @Deprecated(since = "0.5.2", forRemoval = true)
+    public void addPatchouliEntry(JPatchouliEntry entry) {
+        add(entry);
+    }
+
+    /**
+     * Register multiple entries at once with the en_us as locale.
+     * see {@link #addPatchouliEntries(String, JPatchouliEntry...)} for more information.
+     *
+     * @param entries The entries to register.
+     */
+    @Deprecated(since = "0.5.2", forRemoval = true)
+    public void addPatchouliEntries(JPatchouliEntry... entries) {
+        add(entries);
     }
 
 }

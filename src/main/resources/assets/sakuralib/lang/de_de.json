@@ -76,8 +76,8 @@
     "."
   ],
 
-  "patchouli_book.sakuralib_dynamic_book.name" : "Allwissendes Buch",
-  "patchouli_book.sakuralib_dynamic_book.landing_text" : "Dieses Buch beinhaltet alle dynamisch erzueugten Inhalte, die von Mods hinzugefügt wurden.",
-  "patchouli_book.sakuralib_dynamic_book.minecraft.name" : "Minecraft",
-  "patchouli_book.sakuralib_dynamic_book.minecraft.maintext" : "Das ist die Hauptkategorie, in der Minecraft Inhalte erläutert werden."
+  "sakuralib_dynamic_book.name" : "Allwissendes Buch",
+  "sakuralib_dynamic_book.landing_text" : "Dieses Buch beinhaltet alle dynamisch erzueugten Inhalte, die von Mods hinzugefügt wurden.",
+  "sakuralib_dynamic_book.minecraft.name" : "Minecraft",
+  "sakuralib_dynamic_book.minecraft.maintext" : "Das ist die Hauptkategorie, in der Minecraft Inhalte erläutert werden."
 }

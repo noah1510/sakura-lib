@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.arrp.v1.worldgen.processor;
 
 import com.google.gson.JsonObject;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 
 public class InputPredicate {
     public static class inputPredicateType {
@@ -54,7 +55,7 @@ public class InputPredicate {
     }
 
     public String toString() {
-        return input_predicate.toString();
+        return SakuraJsonHelper.toPrettyJson(input_predicate);
     }
 
 }

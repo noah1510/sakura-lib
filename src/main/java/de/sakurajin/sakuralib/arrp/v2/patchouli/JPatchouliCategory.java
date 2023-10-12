@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.arrp.v2.patchouli;
 
 import com.google.gson.JsonObject;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 
 /**
  * A category for a patchouli book
@@ -115,7 +116,7 @@ public class JPatchouliCategory {
      * @return The string representing this category.
      */
     public String toString() {
-        return toJson().toString();
+        return SakuraJsonHelper.toPrettyJson(toJson());
     }
 
     /**

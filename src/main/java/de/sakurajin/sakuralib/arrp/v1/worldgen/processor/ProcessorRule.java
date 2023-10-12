@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.arrp.v1.worldgen.processor;
 
 import com.google.gson.JsonObject;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 import org.jetbrains.annotations.NotNull;
 
 public class ProcessorRule implements Comparable<ProcessorRule> {
@@ -86,7 +87,7 @@ public class ProcessorRule implements Comparable<ProcessorRule> {
     }
 
     public String toString(){
-        return rule.toString();
+        return SakuraJsonHelper.toPrettyJson(rule);
     }
 
     @Override

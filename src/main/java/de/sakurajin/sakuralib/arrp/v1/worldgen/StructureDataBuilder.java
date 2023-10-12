@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import de.sakurajin.sakuralib.datagen.v1.DatagenModContainer;
 import de.sakurajin.sakuralib.arrp.v1.worldgen.processor.JProcessor;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
@@ -167,7 +168,7 @@ public class StructureDataBuilder {
         // actually generate the data files and add them to the resource pack
         dataContainer.RESOURCE_PACK.addData(
             dataContainer.getSimpleID(name + ".json", "worldgen/structure"),
-            structure.toString().getBytes()
+            SakuraJsonHelper.toPrettyBytes(structure)
         );
 
         return this;
@@ -211,7 +212,7 @@ public class StructureDataBuilder {
         // actually generate the data files and add them to the resource pack
         dataContainer.RESOURCE_PACK.addData(
             dataContainer.getSimpleID(name + ".json", "worldgen/structure_set"),
-            structure_set.toString().getBytes()
+            SakuraJsonHelper.toPrettyBytes(structure_set)
         );
 
         return this;
@@ -248,7 +249,7 @@ public class StructureDataBuilder {
         // actually generate the data files and add them to the resource pack
         dataContainer.RESOURCE_PACK.addData(
             dataContainer.getSimpleID(name + ".json", "worldgen/template_pool"),
-            structure_pool.toString().getBytes()
+            SakuraJsonHelper.toPrettyBytes(structure_pool)
         );
 
         return this;

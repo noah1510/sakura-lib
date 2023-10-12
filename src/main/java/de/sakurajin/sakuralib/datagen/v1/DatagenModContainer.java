@@ -68,7 +68,7 @@ public class DatagenModContainer{
             net.fabricmc.fabric.api.event.Event<RRPCallback> event
     ){
         this.MOD_ID = MOD_ID;
-        RESOURCE_PACK = RuntimeResourcePack.create(MOD_ID+"_resources");
+        RESOURCE_PACK = RuntimeResourcePack.create(MOD_ID+":resources");
         LOGGER = LoggerFactory.getLogger(MOD_ID);
 
         if(groupIconSupplier == null){

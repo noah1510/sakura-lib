@@ -3,6 +3,7 @@ package de.sakurajin.sakuralib.arrp.v2.patchouli;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JTextPage;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -238,7 +239,7 @@ public class JPatchouliEntry {
      * @return The serialized json object for this entry as a string.
      */
     public String toString() {
-        return toJson().toString();
+        return SakuraJsonHelper.toPrettyJson(toJson());
     }
 
     /**

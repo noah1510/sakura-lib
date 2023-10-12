@@ -86,7 +86,7 @@ public class DynamicOwOLangManager {
             //add the data to the rrp
             SakuraLib.DATAGEN_CONTAINER.RESOURCE_PACK.addAsset(
                 SakuraLib.DATAGEN_CONTAINER.getSimpleID(entry.getKey() + ".json", "lang"),
-                mergedData.toString().getBytes()
+                SakuraJsonHelper.toPrettyBytes(mergedData)
             );
         }
     }

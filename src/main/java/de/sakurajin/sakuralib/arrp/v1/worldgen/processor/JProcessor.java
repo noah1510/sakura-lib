@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import de.sakurajin.sakuralib.datagen.v1.DatagenModContainer;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 import net.minecraft.util.JsonHelper;
 
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class JProcessor {
     }
 
     public String toString(){
-        return toJson().toString();
+        return SakuraJsonHelper.toPrettyJson(toJson());
     }
 
     public JsonElement toJson(){

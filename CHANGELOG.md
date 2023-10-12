@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.3
+
+* Pretty print most json stuff
+* Revert arrp pack name change
+
 ## 1.5.2
 
 * Simplified the DynamicPatchouliCategoryContainer functions

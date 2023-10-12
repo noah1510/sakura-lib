@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.arrp.v2.patchouli;
 
 import com.google.gson.JsonObject;
+import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 
 /**
  * Base class for all pages
@@ -79,6 +80,6 @@ public abstract class JPageBase {
      * @return The json string for this page.
      */
     public String toString() {
-    	return toJson().toString();
+        return SakuraJsonHelper.toPrettyJson(toJson());
     }
 }

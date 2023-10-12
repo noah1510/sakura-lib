@@ -13,5 +13,6 @@ var searchData=
   ['jprocessor_2ejava_10',['JProcessor.java',['../JProcessor_8java.html',1,'']]],
   ['jrecipepage_2ejava_11',['JRecipePage.java',['../JRecipePage_8java.html',1,'']]],
   ['jsmeltingpage_2ejava_12',['JSmeltingPage.java',['../JSmeltingPage_8java.html',1,'']]],
-  ['jtextpage_2ejava_13',['JTextPage.java',['../JTextPage_8java.html',1,'']]]
+  ['jsonobjectbuilder_2ejava_13',['JsonObjectBuilder.java',['../JsonObjectBuilder_8java.html',1,'']]],
+  ['jtextpage_2ejava_14',['JTextPage.java',['../JTextPage_8java.html',1,'']]]
 ];

@@ -26,6 +26,8 @@ var searchData=
   ['jrecipepage_2ejava_23',['JRecipePage.java',['../JRecipePage_8java.html',1,'']]],
   ['jsmeltingpage_24',['JSmeltingPage',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JSmeltingPage.html',1,'de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JSmeltingPage'],['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JSmeltingPage.html#a6e162ad3407237bf295bccea925ff9ff',1,'de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JSmeltingPage.JSmeltingPage()']]],
   ['jsmeltingpage_2ejava_25',['JSmeltingPage.java',['../JSmeltingPage_8java.html',1,'']]],
-  ['jtextpage_26',['JTextPage',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html',1,'de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JTextPage'],['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html#a986e8511f3e289f33cca707f336c1633',1,'de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JTextPage.JTextPage()']]],
-  ['jtextpage_2ejava_27',['JTextPage.java',['../JTextPage_8java.html',1,'']]]
+  ['jsonobjectbuilder_26',['JsonObjectBuilder',['../classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1JsonObjectBuilder.html',1,'de::sakurajin::sakuralib::util::v1']]],
+  ['jsonobjectbuilder_2ejava_27',['JsonObjectBuilder.java',['../JsonObjectBuilder_8java.html',1,'']]],
+  ['jtextpage_28',['JTextPage',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html',1,'de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JTextPage'],['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html#a986e8511f3e289f33cca707f336c1633',1,'de.sakurajin.sakuralib.arrp.v2.patchouli.pages.JTextPage.JTextPage()']]],
+  ['jtextpage_2ejava_29',['JTextPage.java',['../JTextPage_8java.html',1,'']]]
 ];

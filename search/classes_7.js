@@ -13,5 +13,6 @@ var searchData=
   ['jprocessor_10',['JProcessor',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v1_1_1worldgen_1_1processor_1_1JProcessor.html',1,'de::sakurajin::sakuralib::arrp::v1::worldgen::processor']]],
   ['jrecipepage_11',['JRecipePage',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JRecipePage.html',1,'de::sakurajin::sakuralib::arrp::v2::patchouli::pages']]],
   ['jsmeltingpage_12',['JSmeltingPage',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JSmeltingPage.html',1,'de::sakurajin::sakuralib::arrp::v2::patchouli::pages']]],
-  ['jtextpage_13',['JTextPage',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html',1,'de::sakurajin::sakuralib::arrp::v2::patchouli::pages']]]
+  ['jsonobjectbuilder_13',['JsonObjectBuilder',['../classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1JsonObjectBuilder.html',1,'de::sakurajin::sakuralib::util::v1']]],
+  ['jtextpage_14',['JTextPage',['../classde_1_1sakurajin_1_1sakuralib_1_1arrp_1_1v2_1_1patchouli_1_1pages_1_1JTextPage.html',1,'de::sakurajin::sakuralib::arrp::v2::patchouli::pages']]]
 ];

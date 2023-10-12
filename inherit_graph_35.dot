@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="de.sakurajin.sakuralib.version\lTracker.v1.ModVersionTracker",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1versionTracker_1_1v1_1_1ModVersionTracker.html",tooltip=" "];
+  Node0 [label="de.sakurajin.sakuralib.util.v1.\lJsonObjectBuilder",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classde_1_1sakurajin_1_1sakuralib_1_1util_1_1v1_1_1JsonObjectBuilder.html",tooltip="A simple builder for JsonObjects."];
 }

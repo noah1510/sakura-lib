@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.5.4
+
+**The 1.5.x series it the last that targets minecraft 1.20.1.**
+**Unless a hotfix is needed, 1.5.4 will be the last release in the 1.5.x series.**
+
+* Updated to arrp 0.8.1
+* Updated loom (1.5) and gradle (8.5)
+
 ## 1.5.3
 
 * Pretty print most json stuff

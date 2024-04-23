@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.5
+
+* Backport the BrushableBlock constructor from 1.20.3
+
 ## 1.5.4
 
 **The 1.5.x series it the last that targets minecraft 1.20.1.**

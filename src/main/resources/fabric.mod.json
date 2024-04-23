@@ -32,7 +32,7 @@
     "fabric": "*",
     "minecraft": "~1.20",
     "owo-lib": "*",
-    "advanced_runtime_resource_pack": ">=0.8.0"
+    "advanced_runtime_resource_pack": ">=0.8.1"
   },
   "suggests": {
     "modmenu": "*",

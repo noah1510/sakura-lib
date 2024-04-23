@@ -55,7 +55,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     //Arrp to generate resources during runtime
-    modImplementation("maven.modrinth:arrp:0.8.0")
+    modImplementation("maven.modrinth:arrp:${project.arrp_version}")
 
     //add owo config as config loader
     modImplementation "io.wispforest:owo-lib:${project.owo_version}"
@@ -109,7 +109,7 @@ java {
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}"}
+        rename { "${it}_${base.archivesName}"}
     }
 }
 

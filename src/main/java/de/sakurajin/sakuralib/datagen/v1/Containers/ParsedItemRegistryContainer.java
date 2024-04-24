@@ -25,8 +25,8 @@ import java.lang.reflect.Field;
  *
  * You can add your own parsers to the DatagenModContainer to add your own annotations or handle interface implementations.
  * @see ParsedContainerBase for more information about adding Parsers
- * @see [CraftableItem](@ref Presets.Item.CraftableItem) for an Item that allows easy data generation
- * @see [Owo registration on items](https://docs.wispforest.io/owo/registration/#basics)
+ * @see de.sakurajin.sakuralib.datagen.v1.Presets.Item.CraftableItem for an Item that allows easy data generation
+ * @see <a href="https://docs.wispforest.io/owo/registration/#basics">Owo registration on items</a>
  */
 public abstract class ParsedItemRegistryContainer extends ParsedContainerBase implements ItemRegistryContainer {
     /**

@@ -20,7 +20,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
       - name: Build docs
-        run: ./gradlew doxygen
+        run: ./gradlew javaoc
 
       - name: Release latest if push to 1.20
         if: ${{ github.ref_type != 'tag' }}

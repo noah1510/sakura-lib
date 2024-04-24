@@ -27,7 +27,7 @@ import java.lang.reflect.Field;
  *
  * You can add your own parsers to the DatagenModContainer to add your own annotations or handle interface implementations.
  * @see ParsedContainerBase for more information about adding Parsers
- * @see [Owo registration on blocks](https://docs.wispforest.io/owo/registration/#blocks)
+ * @see <a href="https://docs.wispforest.io/owo/registration/#blocks">Owo registration on blocks</a>
  */
 public abstract class ParsedBlockRegistryContainer extends ParsedContainerBase implements BlockRegistryContainer {
     /**

@@ -1,18 +1,13 @@
 plugins {
     id 'fabric-loom' version '1.6-SNAPSHOT'
     id 'maven-publish'
-    id "org.ysb33r.doxygen" version "1.0.2"
+    id 'java'
 }
 
 base{
     archivesName = project.archives_base_name
     version = project.mod_version
     group = project.maven_group
-}
-
-doxygen {
-    source 'src/main/java'
-    template 'DoxyfileTemplate'
 }
 
 repositories {
@@ -99,6 +94,11 @@ java {
 
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
+}
+
+javadoc {
+    options.optionFiles(file("javadoc.options"))
+    source = sourceSets.main.allJava
 }
 
 jar {

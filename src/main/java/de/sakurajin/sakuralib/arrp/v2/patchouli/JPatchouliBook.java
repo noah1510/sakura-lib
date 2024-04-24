@@ -8,7 +8,7 @@ import java.util.HashMap;
 /**
  * A patchouli book.
  * This class represents the book.json file of a patchouli book.
- * For details about the files check out the [patchouli documentation](https://vazkiimods.github.io/Patchouli/docs/reference/book-json)
+ * For details about the files check out the <a href="https://vazkiimods.github.io/Patchouli/docs/reference/book-json">patchouli documentation</a>
  * @apiNote The default of i18n is true, while the default of patchouli is false. You can disable this with {@link #dontUseI18n()}.
  */
 public class JPatchouliBook {

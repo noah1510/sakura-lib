@@ -27,7 +27,7 @@ jobs:
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.CI_GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "latest-${{ github.ref_name }}"
           prerelease: true
           title: "Pre Release 1.20"
           files: "build/libs/*.jar"

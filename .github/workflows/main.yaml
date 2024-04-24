@@ -2,7 +2,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "1.5.x" ]
     tags:
       - "*.*"
 
@@ -20,10 +20,10 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
       - name: Build docs
-        run: ./gradlew javaoc
+        run: ./gradlew javadoc
 
       - name: Release latest if push to 1.20
-        if: ${{ github.ref_type != 'tag' }}
+        if: github.ref_type != 'tag'
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.CI_GITHUB_TOKEN }}"
@@ -57,8 +57,8 @@ jobs:
           fail-mode: fail
 
       - name: Deploy if tagged release 🚀
-        if: ${{ github.ref_type == 'tag' }}
+        if: ${{ github.ref_type == 'tag' && github.ref == 'refs/heads/main' }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.CI_GITHUB_TOKEN }}
-          folder: build/docs/doxygen/html
+          folder: build/docs/javadoc

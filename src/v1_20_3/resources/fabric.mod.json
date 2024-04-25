@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "sakuralib",
+  "version": "${version}",
+
+  "name": "Sakura Lib",
+  "description": "A library to simplify Datageneration based on top of owo-lib and ARRP",
+  "authors": [
+    "NoaSakurajin"
+  ],
+  "contact": {
+    "repo": "https://github.com/noah1510/sakura-lib"
+  },
+
+  "license": "LGPL-3.0",
+  "icon": "assets/sakuralib/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.sakurajin.sakuralib.SakuraLib"
+    ]
+  },
+
+  "mixins": [
+    "sakuralib_common.mixins.json",
+    "sakuralib.mixins.json"
+  ],
+  "accessWidener" : "sakuralib.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=1.20.3 <1.20.5",
+    "owo-lib": "*",
+    "advanced_runtime_resource_pack": ">=0.8.1"
+  },
+  "suggests": {
+    "modmenu": "*",
+    "numismatic-overhaul": "*",
+    "patchouli": "*"
+  },
+
+  "custom": {
+    "modmenu": {
+      "badges": [ "library" ],
+      "update_checker": true
+    },
+
+    "mc-publish": {
+      "modrinth": "qNs9hFiu",
+      "loaders": ["fabric"],
+      "dependencies": [
+        "advanced_runtime_resource_pack(required){modrinth:arrp}"
+      ]
+    },
+
+    "sakuralib": {
+      "format_version": 1
+    }
+  }
+}

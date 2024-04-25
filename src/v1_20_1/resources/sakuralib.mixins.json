@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.sakurajin.sakuralib.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "minecraft.compat.BrushableBlockMixin"
+  ],
+  "plugin": "de.sakurajin.sakuralib.mixin.MixinPlugin",
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

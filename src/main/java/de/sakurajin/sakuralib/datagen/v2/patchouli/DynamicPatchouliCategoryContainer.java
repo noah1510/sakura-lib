@@ -4,7 +4,6 @@ import de.sakurajin.sakuralib.SakuraLib;
 import de.sakurajin.sakuralib.arrp.v2.patchouli.JPatchouliCategory;
 import de.sakurajin.sakuralib.arrp.v2.patchouli.JPatchouliEntry;
 import de.sakurajin.sakuralib.util.v1.NameIDPair;
-import de.sakurajin.sakuralib.util.v1.SakuraJsonHelper;
 import net.devtech.arrp.api.RuntimeResourcePack;
 import net.minecraft.util.Identifier;
 

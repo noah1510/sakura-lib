@@ -2,6 +2,8 @@ package de.sakurajin.sakuralib.datagen.v1.Presets.Blocks;
 
 import de.sakurajin.sakuralib.datagen.v1.DatagenModContainer;
 import de.sakurajin.sakuralib.datagen.v1.DataGenerateable;
+import de.sakurajin.sakuralib.version_stability.blocks.TrapdoorBlock;
+
 import net.devtech.arrp.json.blockstate.JBlockModel;
 import net.devtech.arrp.json.blockstate.JState;
 import net.devtech.arrp.json.blockstate.JVariant;
@@ -9,7 +11,6 @@ import net.devtech.arrp.json.models.JModel;
 import net.devtech.arrp.json.models.JTextures;
 import net.devtech.arrp.json.recipe.*;
 import net.minecraft.block.BlockSetType;
-import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.item.ItemConvertible;
 
 public class Trapdoor extends TrapdoorBlock implements DataGenerateable {

@@ -1,13 +1,16 @@
 # Changelog
 
+## 1.6.0
+
+* Removed the mod version API (wasn't really working anyways)
+* Added the version_stability package, this package contains simple abstractions to keep ABI stability across minecraft versions
+* Switched to multi-version project (atm 1.20.1-2 and 1.20.3-4)
+
 ## 1.5.5
 
 * Backport the BrushableBlock constructor from 1.20.3
 
 ## 1.5.4
-
-**The 1.5.x series it the last that targets minecraft 1.20.1.**
-**Unless a hotfix is needed, 1.5.4 will be the last release in the 1.5.x series.**
 
 * Updated to arrp 0.8.1
 * Updated loom (1.5) and gradle (8.5)

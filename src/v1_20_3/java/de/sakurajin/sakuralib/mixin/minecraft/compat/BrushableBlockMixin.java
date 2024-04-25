@@ -1,6 +1,6 @@
 package de.sakurajin.sakuralib.mixin.minecraft.compat;
 
-import de.sakurajin.sakuralib.version_stability.BrushableBlock;
+import de.sakurajin.sakuralib.version_stability.blocks.BrushableBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.sound.SoundEvent;

@@ -2,7 +2,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "main", "1.5.x" ]
+    branches: [ "main" ]
     tags:
       - "*.*"
       - "!latest-*"
@@ -18,7 +18,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
-      - name: Build with Gradle
+      - name: Build all with Gradle
         run: ./gradlew build
       - name: Build docs
         run: ./gradlew javadoc
@@ -31,7 +31,9 @@ jobs:
           automatic_release_tag: "latest-${{ github.ref_name }}"
           prerelease: true
           title: "Pre Release 1.20"
-          files: "build/libs/*.jar"
+          files: |
+            v1_20_1/build/libs/*.jar
+            v1_20_3/build/libs/*.jar
 
       - name: Publish to Modrinth and github if tagged
         if: ${{ github.ref_type == 'tag' }}
@@ -46,12 +48,17 @@ jobs:
           github-draft: false
           github-token: ${{ secrets.CI_GITHUB_TOKEN }}
 
-          version: ${{ github.ref_name }}
           changelog-file: CHANGELOG.md
 
           loaders: fabric
           game-version-filter: none
           java: 17
+
+          files: |
+            v1_20_1/build/libs/!(*-@(dev|sources|javadoc)).jar
+            v1_20_1/build/libs/*-@(dev|sources|javadoc).jar
+            v1_20_3/build/libs/!(*-@(dev|sources|javadoc)).jar
+            v1_20_3/build/libs/*-@(dev|sources|javadoc).jar
 
           retry-attempts: 2
           retry-delay: 10000
@@ -62,4 +69,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.CI_GITHUB_TOKEN }}
-          folder: build/docs/javadoc
+          folder: v1_20_3/build/docs/javadoc

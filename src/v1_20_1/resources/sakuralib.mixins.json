@@ -4,7 +4,6 @@
   "package": "de.sakurajin.sakuralib.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "minecraft.compat.BrushableBlockMixin"
   ],
   "plugin": "de.sakurajin.sakuralib.mixin.MixinPlugin",
   "server": [

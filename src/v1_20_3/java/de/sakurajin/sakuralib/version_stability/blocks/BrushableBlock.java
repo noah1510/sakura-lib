@@ -1,17 +1,17 @@
-package de.sakurajin.sakuralib.version_stability;
+package de.sakurajin.sakuralib.version_stability.blocks;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.sound.SoundEvent;
 
-abstract public class BrushableBlock extends net.minecraft.block.BrushableBlock {
+abstract public class BrushableBlock extends net.minecraft.block.BrushableBlock{
     public BrushableBlock(
             Block baseBlock,
             AbstractBlock.Settings settings,
             SoundEvent brushingSound,
             SoundEvent brushingCompleteSound
     ) {
-        super(baseBlock, settings, brushingSound, brushingCompleteSound);
+        super(baseBlock, brushingSound, brushingCompleteSound, settings);
     }
 
     public BrushableBlock(
@@ -20,6 +20,6 @@ abstract public class BrushableBlock extends net.minecraft.block.BrushableBlock 
             SoundEvent brushingCompleteSound,
             AbstractBlock.Settings settings
     ) {
-        this(baseBlock, settings, brushingSound, brushingCompleteSound);
+        super(baseBlock, brushingSound, brushingCompleteSound, settings);
     }
 }

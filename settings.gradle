@@ -11,4 +11,4 @@ pluginManagement {
 rootProject.name = 'sakuralib_multi_project'
 
 include 'v1_20_1'
-//include 'v1_20_3'
+include 'v1_20_3'

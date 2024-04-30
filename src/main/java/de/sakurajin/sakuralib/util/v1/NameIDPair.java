@@ -87,7 +87,7 @@ public class NameIDPair {
     }
 
     /**
-     * Return the NameIDPair as a minecraft Pair<String, Identifier>.
+     * Return the NameIDPair as a minecraft Pair(String, Identifier).
      *
      * @return A new Pair with the name and the identifier
      */

@@ -5,6 +5,8 @@
 * Removed the VANILLA_GROUP_KEY from the DatagenModContainer
 * Refactored the NameIDPair (no longer a pair but a simple class)
 * Added a StructurePoolBasesGenerator compatibility function (forward porting of the 1.20.0 generate function)
+* Make the sakuralib patchouli book recipe a dynamic recipe (only load if patchouli is present)
+* Removed more relics of the mod version api
 
 ## 1.6.0
 

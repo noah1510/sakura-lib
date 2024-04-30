@@ -35,7 +35,7 @@ jobs:
             v1_20_1/build/libs/*.jar
             v1_20_3/build/libs/*.jar
 
-      - name: Publish to Modrinth and github if tagged
+      - name: Publish to Modrinth and github if tagged (1.20.1)
         if: ${{ github.ref_type == 'tag' }}
         uses: Kir-Antipov/mc-publish@v3.3
         with:
@@ -48,7 +48,7 @@ jobs:
           github-draft: false
           github-token: ${{ secrets.CI_GITHUB_TOKEN }}
 
-          changelog-file: CHANGELOG.md
+          changelog-file: changelogs/CHANGELOG_1.6.x.md
 
           loaders: fabric
           game-version-filter: none
@@ -64,7 +64,7 @@ jobs:
           retry-delay: 10000
           fail-mode: fail
 
-      - name: Publish to Modrinth and github if tagged
+      - name: Publish to Modrinth and github if tagged (1.20.3)
         if: ${{ github.ref_type == 'tag' }}
         uses: Kir-Antipov/mc-publish@v3.3
         with:
@@ -77,7 +77,7 @@ jobs:
           github-draft: false
           github-token: ${{ secrets.CI_GITHUB_TOKEN }}
 
-          changelog-file: CHANGELOG.md
+          changelog-file: changelogs/CHANGELOG_1.6.x.md
 
           loaders: fabric
           game-version-filter: none

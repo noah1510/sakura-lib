@@ -11,7 +11,7 @@ import net.minecraft.world.gen.structure.Structure;
 import java.util.Optional;
 
 public class StructurePoolBasedGenerator extends net.minecraft.structure.pool.StructurePoolBasedGenerator{
-    static public Optional<Structure.StructurePosition> generate(
+    static public Optional<Structure.StructurePosition> generate_compat(
             Structure.Context context,
             RegistryEntry<StructurePool> structurePool,
             Optional<Identifier> id,

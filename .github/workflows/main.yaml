@@ -54,9 +54,38 @@ jobs:
           game-version-filter: none
           java: 17
 
+          version: ${{ github.ref_name }}+1.20.1
+
           files: |
             v1_20_1/build/libs/!(*-@(dev|sources|javadoc)).jar
             v1_20_1/build/libs/*-@(dev|sources|javadoc).jar
+
+          retry-attempts: 2
+          retry-delay: 10000
+          fail-mode: fail
+
+      - name: Publish to Modrinth and github if tagged
+        if: ${{ github.ref_type == 'tag' }}
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-featured: true
+          modrinth-unfeature-mode: subset
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          github-tag: ${{ github.ref_name }}
+          github-generate-changelog: true
+          github-draft: false
+          github-token: ${{ secrets.CI_GITHUB_TOKEN }}
+
+          changelog-file: CHANGELOG.md
+
+          loaders: fabric
+          game-version-filter: none
+          java: 17
+
+          version: ${{ github.ref_name }}+1.20.3
+
+          files: |
             v1_20_3/build/libs/!(*-@(dev|sources|javadoc)).jar
             v1_20_3/build/libs/*-@(dev|sources|javadoc).jar
 

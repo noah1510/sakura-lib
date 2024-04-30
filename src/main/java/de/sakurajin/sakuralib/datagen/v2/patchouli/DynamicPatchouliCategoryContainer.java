@@ -122,7 +122,7 @@ public class DynamicPatchouliCategoryContainer {
      * @param entry  The entry to register.
      */
     public void add(String locale, JPatchouliEntry entry) {
-        var location       = PatchouliDataManager.getEntryPath(categoryName.name(), entry.getName(), locale);
+        var location       = PatchouliDataManager.getEntryPath(categoryName.name, entry.getName(), locale);
         var correctedEntry = entry.copyWithCategory(categoryName.IDString());
         addedEntries.put(location, correctedEntry);
     }
@@ -184,7 +184,7 @@ public class DynamicPatchouliCategoryContainer {
 
         //add the category data to the resource pack
         resourcePack.addAsset(
-            PatchouliDataManager.getCategoryPath(categoryName.name()),
+            PatchouliDataManager.getCategoryPath(categoryName.name),
             categoryData.toString().getBytes()
         );
 

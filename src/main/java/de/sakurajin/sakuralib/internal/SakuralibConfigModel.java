@@ -11,10 +11,4 @@ public class SakuralibConfigModel {
     public boolean DEBUG = false;
 
     public boolean ALWAYS_ADD_EXAMPLE_DATA = false;
-
-    @SectionHeader("ModTracking")
-    public boolean ENABLE_WARNING_SCREEN = false;
-    public boolean WARN_ON_MAJOR_VERSION_UPDATE = false;
-    public boolean WARN_ON_MINOR_VERSION_UPDATE = false;
-    public boolean WARN_ON_FORMAT_VERSION_UPDATE = false;
 }

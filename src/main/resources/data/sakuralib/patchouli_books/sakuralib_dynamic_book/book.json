@@ -2,7 +2,7 @@
   "name": "sakuralib_dynamic_book.name",
   "landing_text": "sakuralib_dynamic_book.landing_text",
   "version": 2,
-  "creative_tab": "minecraft:tools_and_utilities",
+  "creative_tab": "sakuralib:sakuralib",
   "book_texture": "patchouli:textures/gui/book_purple.png",
   "model": "sakuralib:sakuralib_dynamic_book",
   "use_resource_pack": true,

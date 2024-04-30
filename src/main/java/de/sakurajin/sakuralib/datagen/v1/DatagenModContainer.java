@@ -44,9 +44,6 @@ public class DatagenModContainer{
     @Nullable
     public final OwoItemGroup GROUP;
 
-    @Nullable
-    public final RegistryKey<ItemGroup> VANILLA_GROUP_KEY;
-
     private final HashMap<String, ArrayList<String>> tags = new HashMap<>();
 
     public DatagenModContainer(String MOD_ID){this(MOD_ID, null, RRPCallback.AFTER_VANILLA);}
@@ -73,14 +70,8 @@ public class DatagenModContainer{
 
         if(groupIconSupplier == null){
             GROUP = null;
-            VANILLA_GROUP_KEY = null;
         }else{
             GROUP = OwoItemGroup.builder(new Identifier(MOD_ID, MOD_ID), groupIconSupplier).build();
-            var key = Registries.ITEM_GROUP.getKey(GROUP);
-            if(key.isEmpty()){
-                throw new RuntimeException("Failed to register item group for mod "+MOD_ID);
-            }
-            VANILLA_GROUP_KEY = key.get();
         }
 
         event.register(a -> a.add(RESOURCE_PACK));

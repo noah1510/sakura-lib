@@ -47,7 +47,7 @@ public class PatchouliDataManager {
      * @return The path ID for the category.
      */
     public static Identifier getCategoryPath(String categoryName) {
-        return new Identifier(SakuraLib.MOD_ID, "patchouli_books/" + SAKURALIB_BOOK.name() + "/en_us/categories/" + categoryName + ".json");
+        return new Identifier(SakuraLib.MOD_ID, "patchouli_books/" + SAKURALIB_BOOK.name + "/en_us/categories/" + categoryName + ".json");
     }
 
     /**
@@ -70,7 +70,7 @@ public class PatchouliDataManager {
      * @return The path ID for the entry.
      */
     public static Identifier getEntryPath(String categoryName, String entryName, String locale) {
-        return new Identifier(SakuraLib.MOD_ID, "patchouli_books/" + SAKURALIB_BOOK.name() + "/" + locale + "/entries/" + categoryName + "/" + entryName + ".json");
+        return new Identifier(SakuraLib.MOD_ID, "patchouli_books/" + SAKURALIB_BOOK.name + "/" + locale + "/entries/" + categoryName + "/" + entryName + ".json");
     }
 
     /**

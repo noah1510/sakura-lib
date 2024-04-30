@@ -1,10 +1,16 @@
 # Changelog
 
+## 1.6.1
+
+* Removed the VANILLA_GROUP_KEY from the DatagenModContainer
+* Refactored the NameIDPair (no longer a pair but a simple class)
+* Added a StructurePoolBasesGenerator compatibility function (forward porting of the 1.20.0 generate function)
+
 ## 1.6.0
 
 * Removed the mod version API (wasn't really working anyways)
 * Added the version_stability package, this package contains simple abstractions to keep ABI stability across minecraft versions
-* Switched to multi-version project (atm 1.20.1-2 and 1.20.3-4)
+* Switched to multi-version project (atm 1.20.0-2 and 1.20.3-4)
 
 ## 1.5.5
 

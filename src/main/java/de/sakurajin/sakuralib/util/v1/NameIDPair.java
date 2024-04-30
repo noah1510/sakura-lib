@@ -7,14 +7,25 @@ import net.minecraft.util.Pair;
 /**
  * A pair the holds both the simple name and the identifier of a resource.
  */
-public class NameIDPair extends Pair<String, Identifier> {
+public class NameIDPair {
+    /**
+     * The name of the resource.
+     */
+    public final String name;
+
+    /**
+     * The identifier of the resource.
+     */
+    public final Identifier ID;
+
     /**
      * Creates a new NameIDPair with the given name and a given mod ID string.
      * @param name the name of the resource
      * @param modID the mod ID of the mod that holds the resource
      */
     public NameIDPair(String name, String modID) {
-        super(name, new Identifier(modID, name));
+        this.name = name;
+        this.ID = new Identifier(modID, name);
     }
 
     /**
@@ -24,7 +35,8 @@ public class NameIDPair extends Pair<String, Identifier> {
      * @param container the container that holds the resource
      */
     public NameIDPair(String name, DatagenModContainer container) {
-        super(name, container.getSimpleID(name));
+        this.name = name;
+        this.ID = container.getSimpleID(name);
     }
 
     /**
@@ -36,27 +48,32 @@ public class NameIDPair extends Pair<String, Identifier> {
      * @see DatagenModContainer#getSimpleID(String, String) for more information on how the id is created
      */
     public NameIDPair(String name, String path, DatagenModContainer container) {
-        super(name, container.getSimpleID(name, path));
+        this.name = name;
+        this.ID = container.getSimpleID(name, path);
     }
 
     /**
      * Return the name part of the pair.
      * A more readable version of getLeft()
      *
+     * @deprecated use the name directly
      * @return the name part of the pair
      */
+    @Deprecated(since = "1.6.1", forRemoval = true)
     public String name() {
-        return getLeft();
+        return name;
     }
 
     /**
      * Return the identifier part of the pair.
      * A more readable version of getRight()
      *
+     * @deprecated use the ID directly
      * @return the identifier part of the pair
      */
+    @Deprecated(since = "1.6.1", forRemoval = true)
     public Identifier ID() {
-        return getRight();
+        return ID;
     }
 
     /**
@@ -66,6 +83,15 @@ public class NameIDPair extends Pair<String, Identifier> {
      * @return the identifier part of the pair as a string
      */
     public String IDString() {
-        return ID().toString();
+        return ID.toString();
+    }
+
+    /**
+     * Return the NameIDPair as a minecraft Pair<String, Identifier>.
+     *
+     * @return A new Pair with the name and the identifier
+     */
+    public Pair<String, Identifier> asPair() {
+        return new Pair<>(name, ID);
     }
 }

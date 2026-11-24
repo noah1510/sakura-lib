@@ -76,8 +76,11 @@ sourceSets {
     }
 }
 
-loom {
-    accessWidenerPath = file("../src/${project.ver_str}/resources/sakuralib.accesswidener")
+fabricApi {
+    configureDataGeneration {
+        outputDirectory = file("../src/${project.ver_str}/generated")
+        modId = "sakuralib"
+    }
 }
 
 javadoc {

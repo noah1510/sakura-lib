@@ -22,12 +22,6 @@
     ]
   },
 
-  "mixins": [
-    "sakuralib_common.mixins.json",
-    "sakuralib.mixins.json"
-  ],
-  "accessWidener" : "sakuralib.accesswidener",
-
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",

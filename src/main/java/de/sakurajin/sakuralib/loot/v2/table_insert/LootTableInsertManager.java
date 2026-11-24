@@ -1,6 +1,7 @@
 package de.sakurajin.sakuralib.loot.v2.table_insert;
 
 import de.sakurajin.sakuralib.SakuraLib;
+import de.sakurajin.sakuralib.loot.v2.LootSourceHelper;
 import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.loot.v2.LootTableSource;
@@ -83,10 +84,10 @@ public class LootTableInsertManager {
         SakuraLib.DATAGEN_CONTAINER.LOGGER.debug("Injecting loot table entries into loot table: {}", tableID.toString());
 
         LootPoolIndexMap.put(tableID, 0);
-        tableBuilder.modifyPools(getPoolModifier(tableID));
+        tableBuilder.modifyPools(getPoolModifier(tableID, tableSource));
     }
 
-    static private Consumer<FabricLootPoolBuilder> getPoolModifier(Identifier tableID) {
+    static private Consumer<FabricLootPoolBuilder> getPoolModifier(Identifier tableID, LootTableSource tableSource) {
         return pool_builder -> {
             var lootTableEntryProviders = LootTableEntryProviders.get(tableID);
             if (lootTableEntryProviders == null) return;
@@ -100,6 +101,7 @@ public class LootTableInsertManager {
 
                     if (lootPoolIndex != poolIndex) continue;
                     if (injection.entry == null) continue;
+                    if (!LootSourceHelper.inNumber(injection.lootSources, tableSource)) continue;
 
                     pool_builder.with(injection.entry);
                 }

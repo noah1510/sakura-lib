@@ -1,31 +1,31 @@
 # Sakura Lib
 
-While this is mainly a library mod, it also contains some features that are useful for players.
+Sakura Lib is a Fabric library mod built around **developer convenience**: mod authors should be able to define their content once in code and get broad compatibility with other mods, datapacks, and Minecraft versions out of the box—without having to maintain repetitive boilerplate or per-mod compatibility layers themselves.
 
-## Player focused features
+## Goals
 
-It contains a mod version tracker for singleplayer worlds.
-This adds a warning if the mod version was downgraded or the mod removed.
-There is a config to also warn about updates.
+1. **Everything in Code (Code-First Workflow)**
+   - Mod developers should not have to juggle a mix of Java code and hand-maintained JSON asset/data files.
+   - Blocks, items, models, blockstates, tags, recipes, loot tables, worldgen structures, and documentation should be defined declaratively in code alongside the gameplay logic.
+2. **Maximum Compatibility Without Per-Mod Effort**
+   - Dependent mods should automatically integrate with popular third-party mods (e.g. *Numismatic Overhaul* for villager trades, *Patchouli* for in-game documentation) without needing direct compile dependencies or custom compat code in every mod.
+   - Content modifications (such as loot table injections or shared documentation books) should compose cleanly with other mods and user datapacks instead of overwriting files.
+   - Version-stability abstractions should shield dependent mods from breaking Vanilla API changes across Minecraft versions wherever practical.
+3. **Minimal Friction & Clean Architecture**
+   - Keep dependent mods decoupled from underlying implementation details.
+   - Prefer build-time generation (e.g. Fabric Data Generation API + Fabric Resource Conditions) for static and conditionally loaded resources, reserving runtime generation for genuinely dynamic, config-driven, or cross-mod data.
 
-## Developer focused features
+## Current Features
 
-This is a library mod for more convenient data generation in minecraft mods.
-It provides a layer on top of owo-lib and ARRP to unify them.
-This in turn allows for fully automatic data generation and registration.
+- **Code-First Data & Asset Generation (`datagen`, `arrp`):** Automatic generation of blockstates, models, tags, recipes, block loot tables, wood sets, worldgen structures, and dynamic `owo` rich translations.
+- **Automatic Mod Integrations (`villager`, `datagen/v2/patchouli`):**
+  - Villager trade helpers that automatically switch between *Numismatic Overhaul* currency and Vanilla emeralds/emerald blocks.
+  - Shared dynamic *Patchouli* book API so mods can contribute documentation categories and entries without each shipping a separate book or hard-depending on Patchouli.
+- **Conflict-Free Loot Injection (`loot/v2`):** Deferred, pool-targeted loot table injections with weight distribution helpers.
+- **Version Stability (`version_stability`):** Thin compatibility wrappers bridging breaking Vanilla constructor/method changes across supported Minecraft versions.
 
-In addition to that it also added a field in the mod json to specify the mods format version.
-This is only used for the mod version tracker for now but will allow the use of datafixing in the future.
-If no format version is specified it will be set to 0.
+## AI Usage Disclosure
 
-You can add the following in your `fabric.mod.json` to set the format version of your mod:
+This project is designed, directed, and maintained by a human developer. Generative AI tools have been used as a development aid **solely for writing and refactoring code** (reviewed and tested by the author).
 
-```json
-"custom": {
-  "sakuralib": {
-    "format_version": 1
-  }
-}
-```
-
-More detailed documentation will be added later.
+Generative AI was **not** used to create any **images or textures, videos, or structures** (nor any icons, gallery media, or other visual/in-game assets).

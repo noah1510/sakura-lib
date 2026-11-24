@@ -44,6 +44,12 @@ dependencies {
     modCompileOnly("maven.modrinth:patchouli:${project.patchouli_version}")
 }
 
+base{
+    archivesName = project.archives_base_name
+    version = project.mod_version+"+"+project.ext.minecraft_version
+    group = project.maven_group
+}
+
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.ext.minecraft_version
@@ -55,12 +61,6 @@ processResources {
                 "minecraft_version": project.ext.minecraft_version,
                 "loader_version": project.loader_version
     }
-}
-
-base{
-    archivesName = project.archives_base_name
-    version = project.mod_version+"+"+project.ext.minecraft_version
-    group = project.maven_group
 }
 
 sourceSets {
